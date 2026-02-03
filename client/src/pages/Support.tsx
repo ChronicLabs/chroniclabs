@@ -32,7 +32,7 @@ export default function Support() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          access_key: "YOUR_ACCESS_KEY_HERE",
+          access_key: "a2642e9e-398f-49a7-8945-14b6684f0f54",
           email: data.email,
           message: data.message,
           subject: "New Contact from Defrag Website",
