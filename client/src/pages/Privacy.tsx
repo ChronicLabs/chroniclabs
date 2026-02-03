@@ -21,7 +21,63 @@ export default function Privacy() {
             <div className="matrix-card">
               <h2 className="text-2xl text-[#00FF41] mb-4 flex items-center">
                 <span className="mr-3 text-[#003B00]">01.</span>
-                DATA_COLLECTION
+                DATA_TYPES_COLLECTED
+              </h2>
+              <p className="leading-relaxed mb-6">
+                Our application collects the following data types to provide and improve our services:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className="flex items-center space-x-3">
+                  <span className="text-[#00FF41]">&gt;</span>
+                  <span>Email Address</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-[#00FF41]">&gt;</span>
+                  <span>Name</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-[#00FF41]">&gt;</span>
+                  <span>User ID</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-[#00FF41]">&gt;</span>
+                  <span>Device ID</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-[#00FF41]">&gt;</span>
+                  <span>Purchase History</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-[#00FF41]">&gt;</span>
+                  <span>Product Interaction</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-[#00FF41]">&gt;</span>
+                  <span>Advertising Data</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-[#00FF41]">&gt;</span>
+                  <span>Other Usage Data</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-[#00FF41]">&gt;</span>
+                  <span>Crash Data</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-[#00FF41]">&gt;</span>
+                  <span>Performance Data</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-[#00FF41]">&gt;</span>
+                  <span>Other Diagnostic Data</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="matrix-card">
+              <h2 className="text-2xl text-[#00FF41] mb-4 flex items-center">
+                <span className="mr-3 text-[#003B00]">02.</span>
+                AUTHENTICATION
               </h2>
               <p className="leading-relaxed">
                 We use <strong className="text-white">Apple Sign In</strong> to provide a secure, anonymous authentication method. 
@@ -32,7 +88,7 @@ export default function Privacy() {
 
             <div className="matrix-card">
               <h2 className="text-2xl text-[#00FF41] mb-4 flex items-center">
-                <span className="mr-3 text-[#003B00]">02.</span>
+                <span className="mr-3 text-[#003B00]">03.</span>
                 IN-APP_PURCHASES
               </h2>
               <p className="leading-relaxed">
@@ -44,7 +100,7 @@ export default function Privacy() {
 
             <div className="matrix-card">
               <h2 className="text-2xl text-[#00FF41] mb-4 flex items-center">
-                <span className="mr-3 text-[#003B00]">03.</span>
+                <span className="mr-3 text-[#003B00]">04.</span>
                 THIRD-PARTY_SERVICES
               </h2>
               <p className="leading-relaxed">
@@ -56,7 +112,7 @@ export default function Privacy() {
 
             <div className="matrix-card">
               <h2 className="text-2xl text-[#00FF41] mb-4 flex items-center">
-                <span className="mr-3 text-[#003B00]">04.</span>
+                <span className="mr-3 text-[#003B00]">05.</span>
                 DATA_DELETION
               </h2>
               <p className="leading-relaxed">
