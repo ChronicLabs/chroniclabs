@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { ReactNode } from "react";
-import { Terminal, Shield, MessageSquare, Menu, X } from "lucide-react";
+import { Home, Gamepad2, Shield, MessageSquare, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -9,9 +9,10 @@ export function Layout({ children }: { children: ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "/", label: "HOME", icon: Terminal },
-    { href: "/privacy", label: "PRIVACY_PROTOCOLS", icon: Shield },
-    { href: "/support", label: "COMM_UPLINK", icon: MessageSquare },
+    { href: "/", label: "HOME", icon: Home },
+    { href: "/defrag", label: "DEFRAG", icon: Gamepad2 },
+    { href: "/privacy", label: "PRIVACY", icon: Shield },
+    { href: "/support", label: "SUPPORT", icon: MessageSquare },
   ];
 
   return (
@@ -23,10 +24,10 @@ export function Layout({ children }: { children: ReactNode }) {
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-2 group cursor-pointer">
                 <div className="w-8 h-8 border border-[#00FF41] flex items-center justify-center group-hover:bg-[#00FF41] group-hover:text-black transition-colors">
-                  <span className="font-bold text-xl leading-none">D</span>
+                  <span className="font-bold text-xl leading-none">C</span>
                 </div>
                 <span className="font-bold text-xl tracking-widest group-hover:text-white transition-colors">
-                  DEFRAG
+                  CHRONIC_LABS
                 </span>
               </Link>
             </div>
@@ -55,6 +56,7 @@ export function Layout({ children }: { children: ReactNode }) {
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="text-[#00FF41] hover:text-white p-2"
+                data-testid="button-mobile-menu"
               >
                 {mobileMenuOpen ? <X /> : <Menu />}
               </button>
@@ -107,15 +109,15 @@ export function Layout({ children }: { children: ReactNode }) {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-[#003B00] text-sm mb-4 md:mb-0 text-center md:text-left">
               <p>© 2026 CHRONIC LABS.</p>
-              <p className="mt-1 font-mono text-xs">INITIALIZING DAILY PROTOCOLS...</p>
+              <p className="mt-1 font-mono text-xs">BUILDING DIGITAL EXPERIENCES</p>
             </div>
             <div className="flex space-x-6 text-sm">
               <Link href="/privacy" className="text-[#003B00] hover:text-[#00FF41] transition-colors">
-                PRIVACY_POLICY
+                PRIVACY
               </Link>
               <span className="text-[#003B00]">|</span>
               <Link href="/support" className="text-[#003B00] hover:text-[#00FF41] transition-colors">
-                SYSTEM_SUPPORT
+                SUPPORT
               </Link>
             </div>
           </div>

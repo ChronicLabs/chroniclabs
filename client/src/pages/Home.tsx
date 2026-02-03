@@ -1,8 +1,8 @@
 import { Layout } from "@/components/Layout";
 import { MatrixButton } from "@/components/MatrixButton";
-import { GridAnimation } from "@/components/GridAnimation";
 import { motion } from "framer-motion";
-import { ArrowRight, Cpu, Network, ShieldCheck } from "lucide-react";
+import { ArrowRight, Gamepad2, Sparkles } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Home() {
   return (
@@ -10,105 +10,119 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative pt-20 pb-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-            
-            {/* Text Content */}
-            <motion.div 
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7 }}
-              className="flex-1 text-center md:text-left z-10"
-            >
-              <div className="inline-block mb-4 px-2 py-1 border border-[#003B00] text-[#003B00] text-xs tracking-[0.2em] font-bold">
-                SYSTEM_VERSION_2.0.4
-              </div>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tighter leading-tight">
-                SYSTEM <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00FF41] to-[#003B00]">FRAGMENTED</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-[#00FF41]/80 mb-8 max-w-xl font-light leading-relaxed">
-                16 data nodes. One correct sequence. Restore order before the cycle ends.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <MatrixButton onClick={() => window.open("#", "_blank")}>
-                  DOWNLOAD_ON_APP_STORE
-                </MatrixButton>
-                <MatrixButton variant="outline" onClick={() => {
-                  document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
-                }}>
-                  SYSTEM_SPECS
-                </MatrixButton>
-              </div>
-            </motion.div>
-
-            {/* Visual Content */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="flex-1 flex justify-center items-center relative"
-            >
-              {/* Decorative rings */}
-              <div className="absolute inset-0 border border-[#003B00] rounded-full opacity-20 animate-[spin_10s_linear_infinite]" />
-              <div className="absolute inset-8 border border-[#00FF41] rounded-full opacity-10 animate-[spin_15s_linear_infinite_reverse]" />
-              
-              <GridAnimation />
-            </motion.div>
-          </div>
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <div className="inline-block mb-6 px-3 py-1 border border-[#003B00] text-[#003B00] text-xs tracking-[0.2em] font-bold">
+              DIGITAL_EXPERIENCES_LAB
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tighter leading-tight">
+              CHRONIC <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00FF41] to-[#003B00]">LABS</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-[#00FF41]/80 mb-10 font-light leading-relaxed">
+              Building unique digital experiences. One app at a time.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section id="features" className="py-24 border-t border-[#003B00] bg-black/50">
+      {/* Products Section */}
+      <section id="products" className="py-24 border-t border-[#003B00] bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <FeatureCard 
-              icon={<Cpu />}
-              title="DAILY_CHALLENGE"
-              description="A new unique sequence is generated every 24 hours. Compete globally on the same hardware parameters."
-            />
-            <FeatureCard 
-              icon={<Network />}
-              title="GLOBAL_LEADERBOARD"
-              description="Sync your high scores to the central mainframe. Verify your standing among other operators."
-            />
-            <FeatureCard 
-              icon={<ShieldCheck />}
-              title="SECURE_ID"
-              description="Anonymous authentication via Apple Sign In. No personal data traces left on the server."
-            />
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">OUR_PROJECTS</h2>
+            <p className="text-[#00FF41]/60">Apps and experiences from the lab</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Defrag Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <Link href="/defrag">
+                <div className="matrix-card group hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 bg-[#003B00]/20 rounded border border-[#003B00] group-hover:border-[#00FF41] group-hover:shadow-[0_0_10px_rgba(0,255,65,0.3)] transition-all">
+                      <Gamepad2 className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-[#00FF41] transition-colors">DEFRAG</h3>
+                      <span className="text-xs text-[#003B00]">PUZZLE_GAME</span>
+                    </div>
+                  </div>
+                  
+                  {/* Mini Grid Preview */}
+                  <div className="border border-[#003B00] w-full aspect-square mb-4 grid grid-cols-4 gap-1 p-2 bg-black group-hover:border-[#00FF41] transition-colors">
+                    {Array.from({ length: 16 }).map((_, i) => (
+                      <div 
+                        key={i} 
+                        className={`bg-[#00FF41] rounded-sm transition-opacity ${[0, 2, 5, 7, 8, 10, 13, 15].includes(i) ? 'opacity-80' : 'opacity-10'}`}
+                      />
+                    ))}
+                  </div>
+                  
+                  <p className="text-[#00FF41]/60 text-sm mb-4">
+                    16 data nodes. One correct sequence. Restore order before the cycle ends.
+                  </p>
+                  
+                  <div className="flex items-center text-[#00FF41] text-sm group-hover:text-white transition-colors">
+                    VIEW_PROJECT <ArrowRight className="ml-2 w-4 h-4" />
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Coming Soon Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <div className="matrix-card h-full opacity-50 cursor-not-allowed">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 bg-[#003B00]/20 rounded border border-[#003B00]">
+                    <Sparkles className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">COMING_SOON</h3>
+                    <span className="text-xs text-[#003B00]">IN_DEVELOPMENT</span>
+                  </div>
+                </div>
+                
+                <div className="border border-[#003B00] border-dashed w-full aspect-square mb-4 flex items-center justify-center bg-black/50">
+                  <span className="text-[#003B00] text-sm">[ CLASSIFIED ]</span>
+                </div>
+                
+                <p className="text-[#00FF41]/40 text-sm">
+                  New project in development. Stay tuned for updates.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* About Section */}
       <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#00FF41]/5 transform skew-y-3 z-0" />
+        <div className="absolute inset-0 bg-[#00FF41]/5 transform -skew-y-3 z-0" />
         <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-8">READY_TO_DEFRAG?</h2>
-          <p className="text-[#00FF41]/70 mb-10 text-lg">
-            The system is waiting for your input. Begin the sequence now.
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">ABOUT_THE_LAB</h2>
+          <p className="text-[#00FF41]/70 mb-6 text-lg leading-relaxed">
+            Chronic Labs creates unique mobile experiences with a focus on clean design and engaging gameplay. 
+            Based on the principle that great apps should be both beautiful and functional.
           </p>
-          <MatrixButton className="text-lg px-10 py-4" onClick={() => window.open("#", "_blank")}>
-            INITIALIZE_DOWNLOAD <ArrowRight className="ml-2 w-5 h-5" />
-          </MatrixButton>
+          <p className="text-[#00FF41]/50 text-sm">
+            Contact: <a href="mailto:hello@chroniclabs.co" className="text-[#00FF41] hover:text-white underline">hello@chroniclabs.co</a>
+          </p>
         </div>
       </section>
     </Layout>
-  );
-}
-
-function FeatureCard({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) {
-  return (
-    <div className="matrix-card group hover:-translate-y-2 transition-transform duration-300">
-      <div className="text-[#00FF41] mb-4 p-3 bg-[#003B00]/20 inline-block rounded border border-[#003B00] group-hover:border-[#00FF41] group-hover:shadow-[0_0_10px_rgba(0,255,65,0.3)] transition-all">
-        {icon}
-      </div>
-      <h3 className="text-xl font-bold mb-3 text-white group-hover:text-[#00FF41] transition-colors">{title}</h3>
-      <p className="text-[#00FF41]/60 leading-relaxed text-sm">
-        {description}
-      </p>
-    </div>
   );
 }
