@@ -8,6 +8,7 @@ import Home from "@/pages/Home";
 import Defrag from "@/pages/Defrag";
 import Privacy from "@/pages/Privacy";
 import Support from "@/pages/Support";
+import Terms from "@/pages/Terms";
 
 function Router() {
   return (
@@ -15,6 +16,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/defrag" component={Defrag} />
       <Route path="/privacy" component={Privacy} />
+      <Route path="/terms" component={Terms} />
       <Route path="/support" component={Support} />
       <Route component={NotFound} />
     </Switch>
