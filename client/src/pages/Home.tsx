@@ -120,50 +120,6 @@ export default function Home() {
             </motion.div>
 
             {/* Chronic Sports Cards */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <a href="https://chronicsportscards.com" target="_blank" rel="noopener noreferrer">
-                <div className="matrix-card group hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 bg-[#003B00]/20 rounded border border-[#003B00] group-hover:border-[#00FF41] group-hover:shadow-[0_0_10px_rgba(0,255,65,0.3)] transition-all">
-                      <Store className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white group-hover:text-[#00FF41] transition-colors">CHRONIC_SPORTS_CARDS</h3>
-                      <span className="text-xs text-[#003B00]">E-COMMERCE</span>
-                    </div>
-                  </div>
-                  
-                  {/* Storefront visual with card and price tag */}
-                  <div className="border border-[#003B00] w-full aspect-square mb-4 flex items-center justify-center bg-black group-hover:border-[#00FF41] transition-colors relative overflow-hidden">
-                    {/* Card shape */}
-                    <div className="w-24 h-32 border-2 border-[#00FF41]/50 rounded bg-gradient-to-br from-[#00FF41]/10 to-transparent relative">
-                      {/* Price tag */}
-                      <div className="absolute -top-2 -right-2 bg-[#00FF41] text-black px-3 py-1 text-xs font-bold transform rotate-12 shadow-[0_0_10px_rgba(0,255,65,0.5)]">
-                        $$$
-                      </div>
-                    </div>
-                    
-                    {/* Decorative elements */}
-                    <div className="absolute top-2 left-2 text-[#003B00] text-xs font-mono">AUTHENTICATED</div>
-                    <div className="absolute bottom-2 right-2 text-[#003B00] text-xs font-mono">PREMIUM</div>
-                  </div>
-                  
-                  <p className="text-[#00FF41]/60 text-sm mb-4">
-                    Premium sports cards marketplace. Authenticated inventory, competitive pricing.
-                  </p>
-                  
-                  <div className="flex items-center text-[#00FF41] text-sm group-hover:text-white transition-colors">
-                    VISIT_STORE <ArrowRight className="ml-2 w-4 h-4" />
-                  </div>
-                </div>
-              </a>
-            </motion.div>
-
             {/* Chronic Sports Cards */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
