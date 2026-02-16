@@ -1,7 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { MatrixButton } from "@/components/MatrixButton";
 import { motion } from "framer-motion";
-import { ArrowRight, Gamepad2, ScanLine, Sparkles } from "lucide-react";
+import { ArrowRight, Gamepad2, ScanLine, Store, Sparkles } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
@@ -37,7 +37,7 @@ export default function Home() {
             <p className="text-[#00FF41]/60">Apps and experiences from the lab</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
             {/* Defrag Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -119,12 +119,103 @@ export default function Home() {
               </Link>
             </motion.div>
 
-            {/* Coming Soon Card */}
+            {/* Chronic Sports Cards */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <a href="https://chronicsportscards.com" target="_blank" rel="noopener noreferrer">
+                <div className="matrix-card group hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 bg-[#003B00]/20 rounded border border-[#003B00] group-hover:border-[#00FF41] group-hover:shadow-[0_0_10px_rgba(0,255,65,0.3)] transition-all">
+                      <Store className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-[#00FF41] transition-colors">CHRONIC_SPORTS_CARDS</h3>
+                      <span className="text-xs text-[#003B00]">E-COMMERCE</span>
+                    </div>
+                  </div>
+                  
+                  {/* Storefront visual with card and price tag */}
+                  <div className="border border-[#003B00] w-full aspect-square mb-4 flex items-center justify-center bg-black group-hover:border-[#00FF41] transition-colors relative overflow-hidden">
+                    {/* Card shape */}
+                    <div className="w-24 h-32 border-2 border-[#00FF41]/50 rounded bg-gradient-to-br from-[#00FF41]/10 to-transparent relative">
+                      {/* Price tag */}
+                      <div className="absolute -top-2 -right-2 bg-[#00FF41] text-black px-3 py-1 text-xs font-bold transform rotate-12 shadow-[0_0_10px_rgba(0,255,65,0.5)]">
+                        $$$
+                      </div>
+                    </div>
+                    
+                    {/* Decorative elements */}
+                    <div className="absolute top-2 left-2 text-[#003B00] text-xs font-mono">AUTHENTICATED</div>
+                    <div className="absolute bottom-2 right-2 text-[#003B00] text-xs font-mono">PREMIUM</div>
+                  </div>
+                  
+                  <p className="text-[#00FF41]/60 text-sm mb-4">
+                    Premium sports cards marketplace. Authenticated inventory, competitive pricing.
+                  </p>
+                  
+                  <div className="flex items-center text-[#00FF41] text-sm group-hover:text-white transition-colors">
+                    VISIT_STORE <ArrowRight className="ml-2 w-4 h-4" />
+                  </div>
+                </div>
+              </a>
+            </motion.div>
+
+            {/* Chronic Sports Cards */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <a href="https://chronicsportscards.com" target="_blank" rel="noopener noreferrer">
+                <div className="matrix-card group hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 bg-[#003B00]/20 rounded border border-[#003B00] group-hover:border-[#00FF41] group-hover:shadow-[0_0_10px_rgba(0,255,65,0.3)] transition-all">
+                      <Store className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-[#00FF41] transition-colors">CHRONIC_SPORTS_CARDS</h3>
+                      <span className="text-xs text-[#003B00]">E-COMMERCE</span>
+                    </div>
+                  </div>
+                  
+                  {/* Storefront Visual */}
+                  <div className="border border-[#003B00] w-full aspect-square mb-4 flex flex-col items-center justify-center bg-black group-hover:border-[#00FF41] transition-colors relative overflow-hidden">
+                    <div className="grid grid-cols-3 gap-2 p-4 w-full h-full">
+                      {Array.from({ length: 9 }).map((_, i) => (
+                        <div 
+                          key={i} 
+                          className={`border border-[#003B00] group-hover:border-[#00FF41]/50 rounded-sm transition-all flex items-center justify-center ${[0, 4, 8].includes(i) ? 'bg-[#00FF41]/10' : 'bg-transparent'}`}
+                        >
+                          <span className="text-[#003B00] group-hover:text-[#00FF41]/40 text-[10px] font-bold transition-colors">
+                            {['PSA', 'BGS', 'SGC', 'RAW', '10', '9.5', 'MT', 'GEM', 'NM'][i]}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <p className="text-[#00FF41]/60 text-sm mb-4">
+                    Premium sports cards marketplace. Authenticated inventory, competitive pricing.
+                  </p>
+                  
+                  <div className="flex items-center text-[#00FF41] text-sm group-hover:text-white transition-colors">
+                    VISIT_STORE <ArrowRight className="ml-2 w-4 h-4" />
+                  </div>
+                </div>
+              </a>
+            </motion.div>
+
+            {/* Coming Soon Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
             >
               <div className="matrix-card h-full opacity-50 cursor-not-allowed">
                 <div className="flex items-center gap-3 mb-4">
