@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Defrag from "@/pages/Defrag";
+import Grade from "@/pages/Grade";
+import GradePrivacy from "@/pages/GradePrivacy";
 import Privacy from "@/pages/Privacy";
 import Support from "@/pages/Support";
 import Terms from "@/pages/Terms";
@@ -15,6 +17,8 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/defrag" component={Defrag} />
+      <Route path="/grade" component={Grade} />
+      <Route path="/grade/privacy" component={GradePrivacy} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/support" component={Support} />

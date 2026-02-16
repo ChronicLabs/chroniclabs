@@ -156,6 +156,34 @@ export default function Terms() {
             <div className="matrix-card">
               <h2 className="text-2xl text-[#00FF41] mb-4 flex items-center">
                 <span className="mr-3 text-[#003B00]">10.</span>
+                GRADE_CHROME_EXTENSION
+              </h2>
+              <p className="leading-relaxed mb-4">
+                The <strong className="text-white">Grade Chrome Extension</strong> is provided "AS IS" for sports card grading assistance. 
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-3">
+                  <span className="text-[#00FF41]">&gt;</span>
+                  <span>Card grades are estimates, not guarantees</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-[#00FF41]">&gt;</span>
+                  <span>Not affiliated with PSA, BGS, SGC, or any official grading service</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-[#00FF41]">&gt;</span>
+                  <span>Results should not be used as the sole basis for purchasing or selling decisions</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-[#00FF41]">&gt;</span>
+                  <span>We are not liable for financial losses based on extension grades</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="matrix-card">
+              <h2 className="text-2xl text-[#00FF41] mb-4 flex items-center">
+                <span className="mr-3 text-[#003B00]">11.</span>
                 CONTACT_PROTOCOL
               </h2>
               <p className="leading-relaxed">

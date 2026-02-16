@@ -15,6 +15,13 @@ export default function Privacy() {
           <header className="mb-12 border-b border-[#003B00] pb-8">
             <h1 className="text-4xl md:text-6xl mb-4 text-[#00FF41]">PRIVACY_POLICY</h1>
             <p className="text-[#003B00] font-mono">LAST_MODIFIED: FEBRUARY_2026</p>
+            <div className="mt-6 p-4 border border-[#003B00] bg-[#003B00]/10 rounded">
+              <p className="text-[#00FF41]/80 text-sm">
+                This privacy policy covers <strong className="text-white">Defrag</strong>. 
+                For the <strong className="text-white">Grade Chrome Extension</strong> privacy policy, 
+                see <Link href="/grade/privacy" className="text-[#00FF41] hover:text-white underline">Grade Privacy Policy</Link>.
+              </p>
+            </div>
           </header>
 
           <section className="space-y-12 text-[#ccc]">

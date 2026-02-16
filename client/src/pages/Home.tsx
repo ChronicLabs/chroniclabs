@@ -1,7 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { MatrixButton } from "@/components/MatrixButton";
 import { motion } from "framer-motion";
-import { ArrowRight, Gamepad2, Sparkles } from "lucide-react";
+import { ArrowRight, Gamepad2, ScanLine, Sparkles } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
@@ -78,12 +78,53 @@ export default function Home() {
               </Link>
             </motion.div>
 
-            {/* Coming Soon Card */}
+            {/* Grade Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <Link href="/grade">
+                <div className="matrix-card group hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 bg-[#003B00]/20 rounded border border-[#003B00] group-hover:border-[#00FF41] group-hover:shadow-[0_0_10px_rgba(0,255,65,0.3)] transition-all">
+                      <ScanLine className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-[#00FF41] transition-colors">GRADE</h3>
+                      <span className="text-xs text-[#003B00]">CHROME_EXTENSION</span>
+                    </div>
+                  </div>
+                  
+                  {/* Card shape with GEM MT 10 */}
+                  <div className="border border-[#003B00] w-full aspect-square mb-4 flex flex-col items-center justify-center bg-black group-hover:border-[#00FF41] transition-colors relative overflow-hidden">
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-b from-transparent via-[#00FF41]/10 to-transparent"
+                      animate={{ y: [-50, 200] }}
+                      transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                    />
+                    <div className="text-4xl font-bold text-[#00FF41] z-10">10</div>
+                    <div className="text-lg font-bold text-white z-10">GEM MT</div>
+                  </div>
+                  
+                  <p className="text-[#00FF41]/60 text-sm mb-4">
+                    AI-powered sports card grading. Upload a photo, get an instant PSA-aligned grade.
+                  </p>
+                  
+                  <div className="flex items-center text-[#00FF41] text-sm group-hover:text-white transition-colors">
+                    VIEW_PROJECT <ArrowRight className="ml-2 w-4 h-4" />
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Coming Soon Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <div className="matrix-card h-full opacity-50 cursor-not-allowed">
                 <div className="flex items-center gap-3 mb-4">

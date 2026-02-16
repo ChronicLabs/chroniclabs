@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { ReactNode } from "react";
-import { Home, Gamepad2, Shield, MessageSquare, Menu, X } from "lucide-react";
+import { Home, Gamepad2, ScanLine, Shield, MessageSquare, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -11,6 +11,7 @@ export function Layout({ children }: { children: ReactNode }) {
   const navLinks = [
     { href: "/", label: "HOME", icon: Home },
     { href: "/defrag", label: "DEFRAG", icon: Gamepad2 },
+    { href: "/grade", label: "GRADE", icon: ScanLine },
     { href: "/privacy", label: "PRIVACY", icon: Shield },
     { href: "/support", label: "SUPPORT", icon: MessageSquare },
   ];
