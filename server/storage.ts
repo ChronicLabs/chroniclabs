@@ -11,6 +11,9 @@ export interface IStorage {
 
 export class DatabaseStorage implements IStorage {
   async createContactMessage(message: InsertContactMessage): Promise<ContactMessage> {
+    if (!db) {
+      throw new Error("Contact form storage is not configured (DATABASE_URL missing).");
+    }
     const [newMessage] = await db
       .insert(contactMessages)
       .values(message)
