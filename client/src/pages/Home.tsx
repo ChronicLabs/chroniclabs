@@ -37,7 +37,7 @@ export default function Home() {
             <p className="text-[#00FF41]/60">Apps and experiences from the lab</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 items-stretch">
             {/* Defrag Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -120,12 +120,11 @@ export default function Home() {
             </motion.div>
 
             {/* Chronic Sports Cards */}
-            {/* Chronic Sports Cards */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <a href="https://chronicsportscards.com" target="_blank" rel="noopener noreferrer">
                 <div className="matrix-card group hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full">
@@ -138,27 +137,33 @@ export default function Home() {
                       <span className="text-xs text-[#003B00]">E-COMMERCE</span>
                     </div>
                   </div>
-                  
-                  {/* Storefront Visual */}
-                  <div className="border border-[#003B00] w-full aspect-square mb-4 flex flex-col items-center justify-center bg-black group-hover:border-[#00FF41] transition-colors relative overflow-hidden">
-                    <div className="grid grid-cols-3 gap-2 p-4 w-full h-full">
-                      {Array.from({ length: 9 }).map((_, i) => (
-                        <div 
-                          key={i} 
-                          className={`border border-[#003B00] group-hover:border-[#00FF41]/50 rounded-sm transition-all flex items-center justify-center ${[0, 4, 8].includes(i) ? 'bg-[#00FF41]/10' : 'bg-transparent'}`}
-                        >
-                          <span className="text-[#003B00] group-hover:text-[#00FF41]/40 text-[10px] font-bold transition-colors">
-                            {['PSA', 'BGS', 'SGC', 'RAW', '10', '9.5', 'MT', 'GEM', 'NM'][i]}
-                          </span>
+
+                  {/* PSA Slab Visual */}
+                  <div className="border border-[#003B00] w-full aspect-square mb-4 flex items-center justify-center bg-black group-hover:border-[#00FF41] transition-colors relative overflow-hidden">
+                    <div className="flex flex-col items-center gap-3 w-full px-6">
+                      {/* Slab */}
+                      <div className="relative w-full max-w-[120px] border-2 border-[#003B00] group-hover:border-[#00FF41]/60 transition-colors bg-black rounded-sm overflow-hidden">
+                        {/* Card inside slab */}
+                        <div className="aspect-[2.5/3.5] bg-gradient-to-b from-[#001a00] to-black flex flex-col items-center justify-center p-2 gap-1">
+                          <div className="text-[8px] text-[#00FF41]/40 tracking-widest font-bold">AUTHENTICATED</div>
+                          <div className="text-2xl font-bold text-[#00FF41]">10</div>
+                          <div className="text-[9px] font-bold text-white tracking-wide">GEM MINT</div>
+                          <div className="w-full h-px bg-[#003B00] group-hover:bg-[#00FF41]/30 transition-colors my-1" />
+                          <div className="text-[7px] text-[#003B00] group-hover:text-[#00FF41]/50 transition-colors tracking-widest">PSA · GRADED</div>
                         </div>
-                      ))}
+                        {/* Label strip at bottom */}
+                        <div className="py-1.5 bg-[#003B00]/30 group-hover:bg-[#00FF41]/10 transition-colors text-center">
+                          <span className="text-[8px] font-bold tracking-widest text-[#003B00] group-hover:text-[#00FF41]/60 transition-colors">CHRONIC_SPORTS_CARDS</span>
+                        </div>
+                      </div>
+                      <div className="text-[9px] text-[#003B00] group-hover:text-[#00FF41]/40 transition-colors tracking-widest font-bold">BUY · SELL · TRADE</div>
                     </div>
                   </div>
-                  
+
                   <p className="text-[#00FF41]/60 text-sm mb-4">
                     Premium sports cards marketplace. Authenticated inventory, competitive pricing.
                   </p>
-                  
+
                   <div className="flex items-center text-[#00FF41] text-sm group-hover:text-white transition-colors">
                     VISIT_STORE <ArrowRight className="ml-2 w-4 h-4" />
                   </div>
