@@ -138,25 +138,39 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* PSA Slab Visual */}
+                  {/* Card Marketplace Visual — fanned cards */}
                   <div className="border border-[#003B00] w-full aspect-square mb-4 flex items-center justify-center bg-black group-hover:border-[#00FF41] transition-colors relative overflow-hidden">
-                    <div className="flex flex-col items-center gap-3 w-full px-6">
-                      {/* Slab */}
-                      <div className="relative w-full max-w-[120px] border-2 border-[#003B00] group-hover:border-[#00FF41]/60 transition-colors bg-black rounded-sm overflow-hidden">
-                        {/* Card inside slab */}
-                        <div className="aspect-[2.5/3.5] bg-gradient-to-b from-[#001a00] to-black flex flex-col items-center justify-center p-2 gap-1">
-                          <div className="text-[8px] text-[#00FF41]/40 tracking-widest font-bold">AUTHENTICATED</div>
-                          <div className="text-2xl font-bold text-[#00FF41]">10</div>
-                          <div className="text-[9px] font-bold text-white tracking-wide">GEM MINT</div>
-                          <div className="w-full h-px bg-[#003B00] group-hover:bg-[#00FF41]/30 transition-colors my-1" />
-                          <div className="text-[7px] text-[#003B00] group-hover:text-[#00FF41]/50 transition-colors tracking-widest">PSA · GRADED</div>
+                    <div className="flex flex-col items-center gap-4 w-full px-4">
+                      {/* Fanned card stack */}
+                      <div className="relative w-[100px] h-[130px]">
+                        {/* Back card — rotated left */}
+                        <div className="absolute top-0 left-0 w-[72px] h-[100px] border border-[#003B00] group-hover:border-[#00FF41]/40 bg-[#001500] rounded-sm transition-all"
+                          style={{ transform: "rotate(-8deg) translate(-4px, 4px)" }}>
+                          <div className="flex flex-col items-center justify-center h-full gap-1">
+                            <div className="text-[8px] text-[#003B00] group-hover:text-[#00FF41]/30 font-bold tracking-widest transition-colors">NFL</div>
+                            <div className="w-8 h-px bg-[#003B00]/60" />
+                            <div className="text-[7px] text-[#003B00]/60 group-hover:text-[#00FF41]/20 transition-colors">RC</div>
+                          </div>
                         </div>
-                        {/* Label strip at bottom */}
-                        <div className="py-1.5 bg-[#003B00]/30 group-hover:bg-[#00FF41]/10 transition-colors text-center">
-                          <span className="text-[8px] font-bold tracking-widest text-[#003B00] group-hover:text-[#00FF41]/60 transition-colors">CHRONIC_SPORTS_CARDS</span>
+                        {/* Middle card — slight right tilt */}
+                        <div className="absolute top-0 left-[16px] w-[72px] h-[100px] border border-[#003B00] group-hover:border-[#00FF41]/60 bg-[#001a00] rounded-sm transition-all"
+                          style={{ transform: "rotate(4deg) translate(4px, 2px)" }}>
+                          <div className="flex flex-col items-center justify-center h-full gap-1">
+                            <div className="text-[8px] text-[#003B00] group-hover:text-[#00FF41]/50 font-bold tracking-widest transition-colors">NBA</div>
+                            <div className="w-8 h-px bg-[#003B00]/60" />
+                            <div className="text-[7px] text-[#003B00]/60 group-hover:text-[#00FF41]/30 transition-colors">HOF</div>
+                          </div>
+                        </div>
+                        {/* Front card — straight */}
+                        <div className="absolute top-[14px] left-[8px] w-[72px] h-[100px] border border-[#00FF41]/40 group-hover:border-[#00FF41] bg-black rounded-sm transition-all shadow-[0_0_8px_rgba(0,255,65,0.1)] group-hover:shadow-[0_0_12px_rgba(0,255,65,0.25)]">
+                          <div className="flex flex-col items-center justify-center h-full gap-1">
+                            <div className="text-[8px] text-[#00FF41]/60 group-hover:text-[#00FF41] font-bold tracking-widest transition-colors">MLB</div>
+                            <div className="w-8 h-px bg-[#00FF41]/30 group-hover:bg-[#00FF41]/60 transition-colors" />
+                            <div className="text-[7px] text-[#00FF41]/40 group-hover:text-[#00FF41]/70 tracking-wider transition-colors">ROOKIE</div>
+                          </div>
                         </div>
                       </div>
-                      <div className="text-[9px] text-[#003B00] group-hover:text-[#00FF41]/40 transition-colors tracking-widest font-bold">BUY · SELL · TRADE</div>
+                      <div className="text-[9px] text-[#003B00] group-hover:text-[#00FF41]/50 transition-colors tracking-widest font-bold">BUY · SELL · TRADE</div>
                     </div>
                   </div>
 
