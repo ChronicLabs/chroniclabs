@@ -18,7 +18,7 @@ interface AllTimeEntry {
   totalMoves: number;
 }
 
-const API_BASE = import.meta.env.VITE_DEFRAG_API_URL || "/api/defrag";
+const PHP_API = "/api/defrag/leaderboard.php";
 
 function getToday(): string {
   const now = new Date();
@@ -39,12 +39,14 @@ export function LiveLeaderboard() {
     setError(false);
     try {
       if (view === "today") {
-        const res = await fetch(`${API_BASE}/leaderboard/${getToday()}/${mode}`);
+        const url = `${PHP_API}?type=daily&date=${getToday()}&mode=${mode}`;
+        const res = await fetch(url);
         if (!res.ok) throw new Error("Failed");
         const data = await res.json();
         setScores(Array.isArray(data) ? data.slice(0, 10) : []);
       } else {
-        const res = await fetch(`${API_BASE}/leaderboard/alltime/${mode}`);
+        const url = `${PHP_API}?type=alltime&mode=${mode}`;
+        const res = await fetch(url);
         if (!res.ok) throw new Error("Failed");
         const data = await res.json();
         setAlltime(Array.isArray(data) ? data.slice(0, 10) : []);

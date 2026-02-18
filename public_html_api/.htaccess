@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^api/defrag/leaderboard/(.*)$ /api/defrag/leaderboard.php [L,QSA]
