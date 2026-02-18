@@ -1,12 +1,49 @@
 import { Layout } from "@/components/Layout";
 import { MatrixButton } from "@/components/MatrixButton";
+import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { ArrowRight, Gamepad2, ScanLine, Store } from "lucide-react";
 import { Link } from "wouter";
 
+const homeSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Chronic Labs",
+    "url": "https://chroniclabs.co",
+    "logo": "https://chroniclabs.co/logo.png",
+    "description": "Chronic Labs builds unique digital experiences — puzzle games, AI tools, and developer utilities.",
+    "email": "hello@chroniclabs.co",
+    "sameAs": ["https://apps.apple.com/us/app/defrag-daily-timeline-puzzle/id6758625499"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Chronic Labs",
+    "url": "https://chroniclabs.co",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Chronic Labs Projects",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Defrag", "url": "https://chroniclabs.co/defrag" },
+      { "@type": "ListItem", "position": 2, "name": "Grade", "url": "https://chroniclabs.co/grade" },
+      { "@type": "ListItem", "position": 3, "name": "Chronic Sports Cards", "url": "https://chronicsportscards.com" },
+    ],
+  },
+];
+
 export default function Home() {
   return (
     <Layout>
+      <SEO
+        title="Chronic Labs — Puzzle Games & Developer Tools"
+        description="Chronic Labs builds unique digital experiences — from daily puzzle games to AI-powered developer tools. Free to play."
+        canonical="https://chroniclabs.co"
+        schema={homeSchema}
+      />
+
       {/* Hero Section */}
       <section className="relative pt-20 pb-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

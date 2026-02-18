@@ -1,10 +1,16 @@
 import { Layout } from "@/components/Layout";
+import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
 
 export default function GradePrivacy() {
   return (
     <Layout>
+      <SEO
+        title="Grade Privacy Policy — Chronic Labs"
+        description="Privacy policy for the Grade AI sports card grader Chrome extension by Chronic Labs."
+        canonical="https://chroniclabs.co/grade/privacy"
+      />
       <div className="matrix-container">
         <Link href="/grade" className="inline-flex items-center text-[#003B00] hover:text-[#00FF41] mb-8 transition-colors group">
           <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />

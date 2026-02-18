@@ -1,5 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { MatrixButton } from "@/components/MatrixButton";
+import { SEO } from "@/components/SEO";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { Mail, MessageSquare, AlertTriangle, CheckCircle } from "lucide-react";
@@ -56,6 +57,11 @@ export default function Support() {
 
   return (
     <Layout>
+      <SEO
+        title="Support — Chronic Labs"
+        description="Get help with Defrag, Grade, or any Chronic Labs app. Contact our support team."
+        canonical="https://chroniclabs.co/support"
+      />
       <div className="matrix-container">
         <header className="mb-12 text-center">
           <h1 className="text-4xl md:text-6xl mb-4">SYSTEM_SUPPORT</h1>

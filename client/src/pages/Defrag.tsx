@@ -1,14 +1,119 @@
 import { Layout } from "@/components/Layout";
 import { MatrixButton } from "@/components/MatrixButton";
 import { GridAnimation } from "@/components/GridAnimation";
+import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Archive, Zap, Shield, Clock, Star, Trophy } from "lucide-react";
+import { useState } from "react";
 
 const APP_STORE_URL = "https://apps.apple.com/us/app/defrag-daily-timeline-puzzle/id6758625499";
+
+const defragFAQs = [
+  {
+    q: "What is Defrag?",
+    a: "Defrag is a free daily chronological puzzle game for iPhone and iPad, made by Chronic Labs. Each day, 16 tiles representing historical events, pop culture moments, and tech milestones are scrambled. Your goal: sort them into the correct chronological order. A new puzzle drops every 24 hours.",
+  },
+  {
+    q: "How do you play Defrag?",
+    a: "Open the app to see 16 scrambled tiles. Drag and drop each tile into chronological order from earliest to latest. Once you're satisfied with the arrangement, submit your solution. Your score is based on move count — fewer moves equals a higher rank. Results are shared on the global leaderboard.",
+  },
+  {
+    q: "Is Defrag free to play?",
+    a: "Yes. Defrag is completely free to download and play on the App Store. The daily puzzle, all 3 difficulty modes, global leaderboard, and streak tracking are all free. Defrag Pro is an optional upgrade for extra features.",
+  },
+  {
+    q: "What is Defrag Pro?",
+    a: "Defrag Pro is an optional subscription that unlocks premium features: access to the full puzzle archive (hundreds of past puzzles), free hints, detailed stats, a Pro badge on the leaderboard, and an ad-free experience. The core daily puzzle remains free forever.",
+  },
+  {
+    q: "How does the leaderboard work?",
+    a: "Every completed puzzle is scored by move count. Fewer moves = higher rank. All players worldwide receive the same daily puzzle, so rankings are directly comparable. Sign in with Apple to appear on the global leaderboard. Guest plays are tracked locally on your device.",
+  },
+  {
+    q: "What are the difficulty modes in Defrag?",
+    a: "Defrag has 3 difficulty modes: Easy (year labels are visible on each tile — focus is on move efficiency), Hard (year labels are hidden — you rely on knowledge of the events), and Super Hard (no hints at all — no years, no indicators, pure chronological mastery).",
+  },
+  {
+    q: "Does Defrag require an account?",
+    a: "No account is required to play. You can complete the daily puzzle as a guest, with scores tracked locally. To appear on the global leaderboard and save your streak across devices, sign in with Apple — a secure, private authentication method.",
+  },
+  {
+    q: "How do streak freezes work?",
+    a: "A streak freeze protects your daily streak on a day you miss the puzzle. When you use a streak freeze, your streak is preserved as if you played that day. Streak freezes can be earned or purchased in-app.",
+  },
+  {
+    q: "Is Defrag available on Android?",
+    a: "Currently, Defrag is only available on iOS — iPhone, iPad, and Mac (Apple Silicon). Android is not supported at this time.",
+  },
+  {
+    q: "What is the puzzle archive?",
+    a: "The puzzle archive is a library of all past Defrag daily puzzles. Defrag Pro subscribers can play any archived puzzle at any time, giving access to hundreds of additional challenges beyond the daily rotation.",
+  },
+];
+
+const defragSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Defrag — Daily Timeline Puzzle",
+    "operatingSystem": "iOS",
+    "applicationCategory": "GameApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "42" },
+    "url": "https://chroniclabs.co/defrag",
+    "downloadUrl": "https://apps.apple.com/us/app/defrag-daily-timeline-puzzle/id6758625499",
+    "description": "Sort 16 historical events in chronological order. New puzzle every day. 3 difficulty modes, global leaderboard, streak tracking.",
+    "screenshot": "https://chroniclabs.co/defrag-screenshot.png",
+    "author": { "@type": "Organization", "name": "Chronic Labs" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": defragFAQs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.a },
+    })),
+  },
+];
+
+function FAQItem({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border border-[#003B00] hover:border-[#00FF41]/50 transition-colors">
+      <button
+        className="w-full text-left px-4 py-4 flex items-start gap-3 group"
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+      >
+        <span className="text-[#003B00] font-mono text-xs mt-0.5 flex-shrink-0 group-hover:text-[#00FF41] transition-colors">
+          {open ? "[-]" : "[+]"}
+        </span>
+        <span className="font-mono text-sm text-[#00FF41]/80 group-hover:text-[#00FF41] transition-colors leading-relaxed">
+          [Q] {q}
+        </span>
+      </button>
+      {open && (
+        <div className="px-4 pb-4 pl-11">
+          <p className="font-mono text-xs text-[#00FF41]/60 leading-relaxed">
+            <span className="text-[#003B00] mr-2">[A]</span>
+            {a}
+          </p>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Defrag() {
   return (
     <Layout>
+      <SEO
+        title="Defrag: Daily Timeline Puzzle Game — Free iOS App"
+        description="Sort 16 historical events in chronological order. New puzzle every day. 3 difficulty modes, global leaderboard, streak tracking. Free on iPhone & iPad."
+        canonical="https://chroniclabs.co/defrag"
+        schema={defragSchema}
+      />
 
       {/* ── HERO ──────────────────────────────────────────────── */}
       <section className="relative pt-20 pb-24 overflow-hidden">
@@ -97,7 +202,7 @@ export default function Defrag() {
             <h2 className="text-3xl font-bold tracking-widest mb-3">HOW_IT_WORKS</h2>
             <p className="text-[#00FF41]/50 text-sm">Three steps. One minute. Daily.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {[
               {
                 step: "01",
@@ -132,6 +237,53 @@ export default function Defrag() {
                 <p className="text-[#00FF41]/60 text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
+          </div>
+
+          {/* ── HOW TO PLAY — Step-by-Step ── */}
+          <div className="border border-[#003B00] bg-black/60 p-8">
+            <div className="mb-6">
+              <span className="text-[10px] font-bold tracking-[0.3em] text-[#003B00] border border-[#003B00] px-2 py-0.5">HOW_TO_PLAY</span>
+            </div>
+            <h3 className="text-xl font-bold tracking-widest mb-8 text-[#00FF41]">STEP_BY_STEP_PROTOCOL</h3>
+            <div className="space-y-6">
+              {[
+                {
+                  n: "01",
+                  label: "OPEN_THE_APP",
+                  desc: "Launch Defrag on your iPhone or iPad. You'll see 16 scrambled tiles, each representing a historical event — moments from history, pop culture, and technology. Every player worldwide receives the exact same set of tiles.",
+                },
+                {
+                  n: "02",
+                  label: "SORT_CHRONOLOGICALLY",
+                  desc: "Drag and drop tiles into chronological order, earliest event at the top, latest at the bottom. In Easy mode, year labels are visible on each tile to help guide your strategy. In Hard mode, years are hidden. In Super Hard, all hints are removed.",
+                },
+                {
+                  n: "03",
+                  label: "SUBMIT_YOUR_SOLUTION",
+                  desc: "When you're confident in your arrangement, submit. Your score is determined by move count — the fewer moves you make, the better your rank. Precision beats speed.",
+                },
+                {
+                  n: "04",
+                  label: "CHECK_GLOBAL_RANK",
+                  desc: "See how your move count stacks up against players worldwide. Share your result, track your daily streak, and come back tomorrow for a new puzzle. Sign in with Apple to appear on the permanent global leaderboard.",
+                },
+              ].map((step, i) => (
+                <motion.div
+                  key={step.n}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="flex gap-6 items-start"
+                >
+                  <div className="text-3xl font-bold font-mono text-[#003B00] flex-shrink-0 w-10">{step.n}</div>
+                  <div>
+                    <div className="text-xs font-bold tracking-widest text-[#00FF41] mb-1">{step.label}</div>
+                    <p className="text-[#00FF41]/60 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -333,6 +485,24 @@ export default function Defrag() {
                 <p className="font-bold text-white text-sm mb-3">{m.label}</p>
                 <p className="text-[#00FF41]/50 text-sm leading-relaxed">{m.detail}</p>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ_PROTOCOL ──────────────────────────────────────── */}
+      <section className="py-20 border-t border-[#003B00] bg-black/40">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <div className="inline-block mb-4 px-2 py-1 border border-[#003B00] text-[#003B00] text-xs tracking-[0.2em] font-bold">
+              KNOWLEDGE_BASE
+            </div>
+            <h2 className="text-3xl font-bold tracking-widest mb-3">FAQ_PROTOCOL</h2>
+            <p className="text-[#00FF41]/50 text-sm font-mono">// frequently asked questions — defrag v1.0</p>
+          </div>
+          <div className="space-y-2">
+            {defragFAQs.map((faq, i) => (
+              <FAQItem key={i} q={faq.q} a={faq.a} />
             ))}
           </div>
         </div>

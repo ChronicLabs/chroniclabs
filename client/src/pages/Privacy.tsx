@@ -1,10 +1,16 @@
 import { Layout } from "@/components/Layout";
+import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
 
 export default function Privacy() {
   return (
     <Layout>
+      <SEO
+        title="Privacy Policy — Chronic Labs"
+        description="Privacy policy for Chronic Labs apps and services including Defrag and Grade."
+        canonical="https://chroniclabs.co/privacy"
+      />
       <div className="matrix-container">
         <Link href="/" className="inline-flex items-center text-[#003B00] hover:text-[#00FF41] mb-8 transition-colors group">
           <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
