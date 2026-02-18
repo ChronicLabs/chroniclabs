@@ -1,9 +1,8 @@
 import { Layout } from "@/components/Layout";
 import { MatrixButton } from "@/components/MatrixButton";
 import { GridAnimation } from "@/components/GridAnimation";
-import { LiveLeaderboard } from "@/components/defrag/LiveLeaderboard";
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar, Archive, Zap, Shield, Clock, Star } from "lucide-react";
+import { ArrowRight, Calendar, Archive, Zap, Shield, Clock, Star, Trophy } from "lucide-react";
 
 const APP_STORE_URL = "https://apps.apple.com/us/app/defrag-daily-timeline-puzzle/id6758625499";
 
@@ -140,21 +139,21 @@ export default function Defrag() {
       {/* ── LEADERBOARD ──────────────────────────────────────── */}
       <section className="py-20 border-t border-[#003B00]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-block mb-4 px-2 py-1 border border-[#003B00] text-[#003B00] text-xs tracking-[0.2em] font-bold">
-                LIVE_DATA
+                GLOBAL_COMPETITION
               </div>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-6">
                 GLOBAL<br/>
                 <span className="text-[#00FF41]">LEADERBOARD</span>
               </h2>
               <p className="text-[#00FF41]/60 mb-6 leading-relaxed">
-                Every completed puzzle is scored by move count. Fewer moves = higher rank. 
+                Every completed puzzle is scored by move count. Fewer moves = higher rank.
                 The best players compete for the top spot daily — same puzzle, same grid, global competition.
               </p>
               <p className="text-[#00FF41]/40 text-sm mb-8">
-                Sign in with Apple to save your scores and appear on the leaderboard. 
+                Sign in with Apple to save your scores and appear on the leaderboard.
                 Guest plays are tracked locally.
               </p>
               <a
@@ -166,7 +165,46 @@ export default function Defrag() {
                 COMPETE TODAY <ArrowRight className="w-4 h-4" />
               </a>
             </div>
-            <LiveLeaderboard />
+
+            {/* Static leaderboard visual */}
+            <div className="border border-[#003B00] bg-black/60 p-6 rounded">
+              <div className="flex items-center gap-3 mb-6">
+                <Trophy className="w-5 h-5 text-[#00FF41]" />
+                <span className="font-bold tracking-widest text-sm">GLOBAL_RANKINGS</span>
+              </div>
+              <div className="space-y-3 mb-6">
+                {[
+                  { rank: 1, name: "PLAYER_7731", moves: 16, color: "#FFD700" },
+                  { rank: 2, name: "GRIDMASTER", moves: 18, color: "#C0C0C0" },
+                  { rank: 3, name: "DATANAUT_X", moves: 21, color: "#CD7F32" },
+                  { rank: 4, name: "CHRONOS_9", moves: 23, color: "#003B00" },
+                  { rank: 5, name: "NULLBYTE", moves: 25, color: "#003B00" },
+                ].map((entry) => (
+                  <div key={entry.rank} className="flex items-center justify-between py-2 border-b border-[#003B00]/40 last:border-0">
+                    <div className="flex items-center gap-3">
+                      <span className="text-xs font-bold w-5 text-right" style={{ color: entry.color }}>
+                        {entry.rank}
+                      </span>
+                      <span className="text-sm text-[#00FF41]/80 font-mono">{entry.name}</span>
+                    </div>
+                    <span className="text-sm font-bold font-mono text-[#00FF41]">
+                      {entry.moves} <span className="text-xs text-[#003B00] font-normal">moves</span>
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div className="text-center border border-dashed border-[#003B00] py-3 px-4">
+                <p className="text-[#003B00] text-xs tracking-widest">YOUR_RANK_LIVES_IN_THE_APP</p>
+                <a
+                  href={APP_STORE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-flex items-center gap-1 text-[#00FF41] text-xs hover:text-white transition-colors"
+                >
+                  DOWNLOAD TO COMPETE <ArrowRight className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
