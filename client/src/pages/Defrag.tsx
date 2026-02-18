@@ -31,7 +31,7 @@ export default function Defrag() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <MatrixButton onClick={() => window.open("#", "_blank")}>
+                <MatrixButton onClick={() => window.open("https://apps.apple.com/us/app/defrag-daily-timeline-puzzle/id6758625499", "_blank")}>
                   DOWNLOAD_ON_APP_STORE
                 </MatrixButton>
                 <MatrixButton variant="outline" onClick={() => {
@@ -90,7 +90,7 @@ export default function Defrag() {
           <p className="text-[#00FF41]/70 mb-10 text-lg">
             The system is waiting for your input. Begin the sequence now.
           </p>
-          <MatrixButton className="text-lg px-10 py-4" onClick={() => window.open("#", "_blank")}>
+          <MatrixButton className="text-lg px-10 py-4" onClick={() => window.open("https://apps.apple.com/us/app/defrag-daily-timeline-puzzle/id6758625499", "_blank")}>
             INITIALIZE_DOWNLOAD <ArrowRight className="ml-2 w-5 h-5" />
           </MatrixButton>
         </div>
