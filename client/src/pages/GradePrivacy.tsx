@@ -10,6 +10,17 @@ export default function GradePrivacy() {
         title="Grade Privacy Policy — Chronic Labs"
         description="Privacy policy for the Grade AI sports card grader Chrome extension by Chronic Labs."
         canonical="https://chroniclabs.co/grade/privacy"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chroniclabs.co" },
+              { "@type": "ListItem", "position": 2, "name": "Grade", "item": "https://chroniclabs.co/grade" },
+              { "@type": "ListItem", "position": 3, "name": "Grade Privacy Policy", "item": "https://chroniclabs.co/grade/privacy" },
+            ],
+          },
+        ]}
       />
       <div className="matrix-container">
         <Link href="/grade" className="inline-flex items-center text-[#003B00] hover:text-[#00FF41] mb-8 transition-colors group">

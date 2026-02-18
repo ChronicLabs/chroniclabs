@@ -10,6 +10,16 @@ export default function Terms() {
         title="Terms of Service — Chronic Labs"
         description="Terms of service for Chronic Labs apps and services."
         canonical="https://chroniclabs.co/terms"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chroniclabs.co" },
+              { "@type": "ListItem", "position": 2, "name": "Terms of Service", "item": "https://chroniclabs.co/terms" },
+            ],
+          },
+        ]}
       />
       <div className="matrix-container">
         <Link href="/" className="inline-flex items-center text-[#003B00] hover:text-[#00FF41] mb-8 transition-colors group">

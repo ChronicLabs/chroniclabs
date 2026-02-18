@@ -53,6 +53,14 @@ const gradeSchema = [
       "acceptedAnswer": { "@type": "Answer", "text": faq.a },
     })),
   },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chroniclabs.co" },
+      { "@type": "ListItem", "position": 2, "name": "Grade", "item": "https://chroniclabs.co/grade" },
+    ],
+  },
 ];
 
 function FAQItem({ q, a }: { q: string; a: string }) {
@@ -109,8 +117,8 @@ export default function Grade() {
                 CHROME_EXTENSION
               </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tighter leading-tight">
-                AI-POWERED <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00FF41] to-[#003B00]">CARD_GRADING</span>
+                GRADE<br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00FF41] to-[#003B00]">AI CARD_GRADING</span>
               </h1>
               <p className="text-xl md:text-2xl text-[#00FF41]/80 mb-8 max-w-xl font-light leading-relaxed">
                 Chrome extension that grades sports cards using AI. Upload a photo, get instant PSA-aligned grade.

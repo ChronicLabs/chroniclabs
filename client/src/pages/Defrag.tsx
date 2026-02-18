@@ -75,6 +75,47 @@ const defragSchema = [
       "acceptedAnswer": { "@type": "Answer", "text": faq.a },
     })),
   },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chroniclabs.co" },
+      { "@type": "ListItem", "position": 2, "name": "Defrag", "item": "https://chroniclabs.co/defrag" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Play Defrag",
+    "description": "Defrag is a daily chronological sorting puzzle. Sort 16 historical events into the correct order in as few moves as possible.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Open the daily puzzle",
+        "text": "Each day at midnight, 16 new scrambled tiles appear representing historical events, pop culture moments, or tech milestones. Every player worldwide gets the same puzzle.",
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Choose your difficulty mode",
+        "text": "Select Easy mode (years visible on tiles), Hard mode (years hidden), or Super Hard mode (no hints at all). Each mode uses the same puzzle with different information shown.",
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Sort tiles into chronological order",
+        "text": "Drag and tap tiles to arrange all 16 events from earliest to latest. Your score is tracked by move count — fewer moves means a higher rank.",
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Submit and check your global rank",
+        "text": "Submit your solution to see your move count, completion time, and global leaderboard rank. Share your result and return tomorrow for a new puzzle.",
+      },
+    ],
+    "tool": [{ "@type": "HowToTool", "name": "Defrag iOS app (free)" }],
+  },
 ];
 
 function FAQItem({ q, a }: { q: string; a: string }) {

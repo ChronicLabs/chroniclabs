@@ -10,6 +10,16 @@ export default function Privacy() {
         title="Privacy Policy — Chronic Labs"
         description="Privacy policy for Chronic Labs apps and services including Defrag and Grade."
         canonical="https://chroniclabs.co/privacy"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chroniclabs.co" },
+              { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://chroniclabs.co/privacy" },
+            ],
+          },
+        ]}
       />
       <div className="matrix-container">
         <Link href="/" className="inline-flex items-center text-[#003B00] hover:text-[#00FF41] mb-8 transition-colors group">

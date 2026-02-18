@@ -61,6 +61,16 @@ export default function Support() {
         title="Support — Chronic Labs"
         description="Get help with Defrag, Grade, or any Chronic Labs app. Contact our support team."
         canonical="https://chroniclabs.co/support"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chroniclabs.co" },
+              { "@type": "ListItem", "position": 2, "name": "Support", "item": "https://chroniclabs.co/support" },
+            ],
+          },
+        ]}
       />
       <div className="matrix-container">
         <header className="mb-12 text-center">
