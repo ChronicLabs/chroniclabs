@@ -1,7 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { MatrixButton } from "@/components/MatrixButton";
 import { motion } from "framer-motion";
-import { ArrowRight, Gamepad2, ScanLine, Store, Sparkles } from "lucide-react";
+import { ArrowRight, Gamepad2, ScanLine, Store } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
@@ -37,7 +37,7 @@ export default function Home() {
             <p className="text-[#00FF41]/60">Apps and experiences from the lab</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             {/* Defrag Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -132,8 +132,8 @@ export default function Home() {
                     <div className="p-3 bg-[#003B00]/20 rounded border border-[#003B00] group-hover:border-[#00FF41] group-hover:shadow-[0_0_10px_rgba(0,255,65,0.3)] transition-all">
                       <Store className="w-6 h-6" />
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white group-hover:text-[#00FF41] transition-colors">CHRONIC_SPORTS_CARDS</h3>
+                    <div className="min-w-0">
+                      <h3 className="text-xl font-bold text-white group-hover:text-[#00FF41] transition-colors leading-tight">CHRONIC<br/>SPORTS_CARDS</h3>
                       <span className="text-xs text-[#003B00]">E-COMMERCE</span>
                     </div>
                   </div>
@@ -183,34 +183,6 @@ export default function Home() {
                   </div>
                 </div>
               </a>
-            </motion.div>
-
-            {/* Coming Soon Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <div className="matrix-card h-full opacity-50 cursor-not-allowed">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-[#003B00]/20 rounded border border-[#003B00]">
-                    <Sparkles className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">COMING_SOON</h3>
-                    <span className="text-xs text-[#003B00]">IN_DEVELOPMENT</span>
-                  </div>
-                </div>
-                
-                <div className="border border-[#003B00] border-dashed w-full aspect-square mb-4 flex items-center justify-center bg-black/50">
-                  <span className="text-[#003B00] text-sm">[ CLASSIFIED ]</span>
-                </div>
-                
-                <p className="text-[#00FF41]/40 text-sm">
-                  New project in development. Stay tuned for updates.
-                </p>
-              </div>
             </motion.div>
           </div>
         </div>
