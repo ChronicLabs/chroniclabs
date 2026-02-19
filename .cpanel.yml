@@ -3,5 +3,3 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/chroniclabs/public_html/
     - /bin/cp -R dist/public/. $DEPLOYPATH
-    - /bin/cp public/sitemap.xml $DEPLOYPATH
-    - /bin/cp public/robots.txt $DEPLOYPATH

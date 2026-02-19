@@ -1,0 +1,25 @@
+# Chronic Labs
+
+> Chronic Labs is an indie software studio building unique digital experiences — puzzle games, AI-powered developer tools, and sports card utilities.
+
+Website: https://chroniclabs.co
+Contact: hello@chroniclabs.co
+
+## Products
+
+- [Defrag](https://chroniclabs.co/defrag): A free daily iOS puzzle game. Players sort 16 historical events, pop culture moments, and tech milestones into chronological order. New puzzle every day at midnight. Three difficulty modes (Easy, Hard, Super Hard), global leaderboard ranked by move count, streak tracking with streak freezes, and a full puzzle archive for Pro subscribers. Available on iPhone, iPad, and Mac (Apple Silicon).
+- [Grade](https://chroniclabs.co/grade): A free Chrome extension that uses AI to grade sports cards. Upload a photo of any sports card and receive an instant PSA-aligned grade (1–10 scale) with confidence score. Built for collectors, buyers, and sellers.
+- [Chronic Sports Cards](https://chronicsportscards.com): A premium sports cards marketplace. Authenticated inventory across MLB, NBA, NFL, and more.
+
+## Key Pages
+
+- [Home](https://chroniclabs.co/): Studio overview and project listing.
+- [Defrag App Page](https://chroniclabs.co/defrag): Full details on the Defrag daily puzzle game — how to play, difficulty modes, leaderboard, FAQ, and App Store download link.
+- [Grade Extension Page](https://chroniclabs.co/grade): Full details on the Grade Chrome extension — features, how to install, FAQ.
+- [Privacy Policy](https://chroniclabs.co/privacy): Privacy policy covering all Chronic Labs apps and services.
+- [Support](https://chroniclabs.co/support): Support contact for Defrag, Grade, and all Chronic Labs products.
+- [Terms of Service](https://chroniclabs.co/terms): Terms of service for all Chronic Labs apps and services.
+
+## About
+
+Chronic Labs was founded on the principle that great apps should be both beautiful and functional. Projects span mobile gaming, AI tooling, and e-commerce. Based in the United States.
