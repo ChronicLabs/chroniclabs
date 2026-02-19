@@ -59,7 +59,6 @@ const defragSchema = [
     "operatingSystem": "iOS",
     "applicationCategory": "GameApplication",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "42" },
     "url": "https://chroniclabs.co/defrag",
     "downloadUrl": "https://apps.apple.com/us/app/defrag-daily-timeline-puzzle/id6758625499",
     "description": "Sort 16 historical events in chronological order. New puzzle every day. 3 difficulty modes, global leaderboard, streak tracking.",
