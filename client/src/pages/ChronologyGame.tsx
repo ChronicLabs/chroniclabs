@@ -25,12 +25,8 @@ const chronologyFAQs = [
     a: "You start with scrambled historical items and swap their positions until everything is in chronological order from oldest to newest. In Defrag, tap two tiles to swap them, working through 16 items until the full timeline is correct. Easy mode shows years on each tile (pure sorting), while Hard mode hides years (tests your knowledge). Once you're confident in your arrangement, submit to see your score and rank on the leaderboard.",
   },
   {
-    q: "Is a chronology game like Wordle?",
-    a: "Yes—chronology games like Defrag share Wordle's daily challenge format: one puzzle per day at midnight, streak tracking, shareable results, and leaderboards. The difference is Wordle tests vocabulary (guess a 5-letter word) while chronology games test timeline knowledge (arrange 16 items chronologically). Both build daily habits and take 5-15 minutes, making them perfect for morning coffee or commute routines.",
-  },
-  {
-    q: "Is a chronology game like Connections?",
-    a: "Mechanically, yes! Both Defrag and NYT's Connections show a grid of tiles you tap and rearrange. Connections asks you to group tiles by category, while Defrag asks you to arrange them chronologically. Both reward pattern recognition and deduction rather than pure memorization. If you enjoy Connections' sorting mechanic, Defrag offers a similar experience with a timeline twist.",
+    q: "How does a chronology game work?",
+    a: "Chronology games give you scrambled historical items to arrange in timeline order. Defrag presents 16 tiles daily—tap two to swap positions, working through the grid until everything is chronologically correct from oldest to newest. Easy mode shows years (great for learning), Hard mode hides them (tests your knowledge). Submit when ready to see your score and leaderboard rank.",
   },
   {
     q: "Are chronology games free?",
@@ -192,21 +188,28 @@ export default function ChronologyGame() {
             </div>
 
             {/* Primary CTA */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <MatrixButton 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a 
                 href={APP_STORE_URL}
-                className="text-lg px-8 py-4"
+                className="inline-block hover:opacity-90 transition-opacity"
               >
-                Download on iOS
-              </MatrixButton>
+                <img 
+                  src="/app-store-badge.svg" 
+                  alt="Download Defrag on the App Store"
+                  className="h-14"
+                />
+              </a>
               <MatrixButton 
                 href={WEB_PLAY_URL}
                 variant="secondary"
                 className="text-lg px-8 py-4"
               >
-                Play on Web
+                Play on Web →
               </MatrixButton>
             </div>
+            <p className="text-sm text-gray-500 mt-4">
+              Android coming soon • Free to play
+            </p>
           </motion.div>
         </div>
       </section>
@@ -321,120 +324,98 @@ export default function ChronologyGame() {
             </div>
 
             <div className="text-center">
-              <MatrixButton href={WEB_PLAY_URL}>
-                Try Today's Puzzle →
-              </MatrixButton>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a 
+                  href={APP_STORE_URL}
+                  className="inline-block hover:opacity-90 transition-opacity"
+                >
+                  <img 
+                    src="/app-store-badge.svg" 
+                    alt="Download Defrag on the App Store"
+                    className="h-12"
+                  />
+                </a>
+                <span className="text-gray-600">or</span>
+                <MatrixButton href={WEB_PLAY_URL} variant="secondary">
+                  Try on Web →
+                </MatrixButton>
+              </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Like Wordle + Connections Comparison */}
+      {/* What Makes Defrag Unique */}
       <section className="py-20 bg-gray-900/50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-5xl mx-auto"
+            className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-white">
-              Daily Chronology Game - Like Connections + Wordle Combined
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+              Daily Puzzle Themes
             </h2>
 
-            <p className="text-lg text-gray-300 mb-12 text-center max-w-3xl mx-auto">
-              If you enjoy NYT's Connections (sorting tiles into groups) or Wordle's daily challenge format, Defrag combines both: arrange 16 items chronologically with one new puzzle every day.
+            <p className="text-lg text-gray-300 mb-12 text-center">
+              Defrag offers one new chronology puzzle every day at midnight—like the daily format you know from Wordle or Connections, but testing your timeline knowledge instead.
             </p>
 
-            {/* Comparison Table */}
-            <div className="overflow-x-auto mb-12">
-              <table className="w-full border-collapse bg-gray-900/50 border border-gray-800 rounded-lg overflow-hidden">
-                <thead>
-                  <tr className="bg-gray-800/50">
-                    <th className="text-left p-4 text-gray-300 font-semibold border-b border-gray-700">Feature</th>
-                    <th className="text-center p-4 text-gray-300 font-semibold border-b border-gray-700">Wordle</th>
-                    <th className="text-center p-4 text-gray-300 font-semibold border-b border-gray-700">Connections</th>
-                    <th className="text-center p-4 text-blue-400 font-semibold border-b border-gray-700">Defrag</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    { feature: 'Daily Format', wordle: '✅', connections: '✅', defrag: '✅' },
-                    { feature: 'Grid of Tiles', wordle: '❌', connections: '✅', defrag: '✅' },
-                    { feature: 'Skill Focus', wordle: 'Vocabulary', connections: 'Categorization', defrag: 'Timeline knowledge' },
-                    { feature: 'Mechanic', wordle: 'Guess letters', connections: 'Group by category', defrag: 'Arrange chronologically' },
-                    { feature: 'Shareable Results', wordle: '✅', connections: '✅', defrag: '✅' },
-                    { feature: 'Streak Tracking', wordle: '✅', connections: '✅', defrag: '✅' },
-                  ].map((row, i) => (
-                    <tr key={i} className={i % 2 === 0 ? 'bg-gray-900/20' : 'bg-transparent'}>
-                      <td className="p-4 text-white font-medium">{row.feature}</td>
-                      <td className="p-4 text-center text-gray-300">{row.wordle}</td>
-                      <td className="p-4 text-center text-gray-300">{row.connections}</td>
-                      <td className="p-4 text-center text-blue-400">{row.defrag}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            {/* Theme Grid */}
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              {[
+                { icon: '🖥️', title: 'Tech History', examples: 'Operating systems, smartphones, gaming consoles' },
+                { icon: '🎬', title: 'Entertainment', examples: 'Pixar movies, Marvel films, video game releases' },
+                { icon: '🚀', title: 'Historical Events', examples: 'Space exploration, Olympics, scientific discoveries' },
+                { icon: '🎵', title: 'Culture & Sports', examples: 'Music platforms, social media, championships' },
+              ].map((theme) => (
+                <div key={theme.title} className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
+                  <div className="text-4xl mb-3">{theme.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{theme.title}</h3>
+                  <p className="text-gray-400 text-sm">{theme.examples}</p>
+                </div>
+              ))}
             </div>
 
-            {/* Comparison Cards */}
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">Defrag is like Connections because:</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex gap-2">
-                    <span className="text-blue-400">•</span>
-                    <span>Both show a grid of tiles you tap to rearrange</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-blue-400">•</span>
-                    <span>Both reward pattern recognition</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-blue-400">•</span>
-                    <span>Both let you shuffle/rearrange until you find the answer</span>
-                  </li>
-                </ul>
-              </div>
+            {/* Easy vs Hard Mode */}
+            <div className="bg-blue-900/20 border border-blue-800/50 rounded-lg p-8 mb-8">
+              <h3 className="text-2xl font-semibold text-white mb-6 text-center">Two Difficulty Modes</h3>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="text-lg font-semibold text-blue-300 mb-2">Easy Mode</h4>
+                  <p className="text-gray-300 text-sm mb-3">Years are visible on each tile. Focus on arranging them in the right order—perfect for learning and speed runs.</p>
+                  <div className="bg-gray-900/50 rounded p-3 text-sm text-gray-400">
+                    <div className="font-mono">Windows 95 → <span className="text-blue-400">1995</span></div>
+                    <div className="font-mono">iOS → <span className="text-blue-400">2007</span></div>
+                  </div>
+                </div>
 
-              <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">Defrag is like Wordle because:</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex gap-2">
-                    <span className="text-blue-400">•</span>
-                    <span>One puzzle per day at midnight</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-blue-400">•</span>
-                    <span>Shareable results without spoilers</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-blue-400">•</span>
-                    <span>Streak tracking for daily play</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-blue-400">•</span>
-                    <span>Same habit-forming format</span>
-                  </li>
-                </ul>
+                <div>
+                  <h4 className="text-lg font-semibold text-purple-300 mb-2">Hard Mode</h4>
+                  <p className="text-gray-300 text-sm mb-3">Years are hidden. Rely on your knowledge and deduction—more challenging, more rewarding.</p>
+                  <div className="bg-gray-900/50 rounded p-3 text-sm text-gray-400">
+                    <div className="font-mono">Windows 95 → <span className="text-gray-600">????</span></div>
+                    <div className="font-mono">iOS → <span className="text-gray-600">????</span></div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-blue-900/20 border border-blue-800/50 rounded-lg p-6 mb-8">
-              <h3 className="text-xl font-semibold text-blue-300 mb-3">What makes Defrag unique:</h3>
-              <p className="text-gray-300">
-                Instead of grouping (Connections) or guessing (Wordle), you <strong>arrange items chronologically</strong>. 
-                Tests timeline knowledge + deduction. Themes change daily (tech, movies, history, sports).
-              </p>
-            </div>
-
+            {/* CTA */}
             <div className="text-center">
-              <MatrixButton href={APP_STORE_URL} className="mb-4">
-                Download Defrag - Free on iOS →
-              </MatrixButton>
-              <p className="text-xs text-gray-500 max-w-2xl mx-auto">
-                Wordle and Connections are trademarks of The New York Times Company. Defrag is an independent game not affiliated with or endorsed by NYT.
-              </p>
+              <a 
+                href={APP_STORE_URL}
+                className="inline-block hover:opacity-90 transition-opacity mb-4"
+              >
+                <img 
+                  src="/app-store-badge.svg" 
+                  alt="Download Defrag on the App Store"
+                  className="h-14 mx-auto"
+                />
+              </a>
+              <p className="text-gray-400 text-sm">Free to play • New puzzle daily at midnight</p>
             </div>
           </motion.div>
         </div>
@@ -520,12 +501,26 @@ export default function ChronologyGame() {
               No commitment needed—play today, skip tomorrow, come back next week. The puzzle resets daily whether you play or not.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <MatrixButton href={APP_STORE_URL} className="text-lg px-8 py-4">
-                Download on iOS
-              </MatrixButton>
+            <div className="flex flex-col items-center gap-6">
+              <a 
+                href={APP_STORE_URL}
+                className="inline-block hover:opacity-90 transition-opacity"
+              >
+                <img 
+                  src="/app-store-badge.svg" 
+                  alt="Download Defrag on the App Store"
+                  className="h-16"
+                />
+              </a>
+              
+              <div className="flex items-center gap-4">
+                <div className="h-px w-12 bg-gray-700"></div>
+                <span className="text-gray-500 text-sm">or</span>
+                <div className="h-px w-12 bg-gray-700"></div>
+              </div>
+              
               <MatrixButton href={WEB_PLAY_URL} variant="secondary" className="text-lg px-8 py-4">
-                Play on Web
+                Play on Web (No Download) →
               </MatrixButton>
             </div>
           </motion.div>
