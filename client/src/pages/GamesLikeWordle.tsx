@@ -1,6 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedPages } from "@/components/RelatedPages";
+import { MatrixButton } from "@/components/MatrixButton";
 import { motion } from "framer-motion";
 import { Calendar, Shuffle, Trophy, Brain, Download, Zap } from "lucide-react";
 import {
@@ -160,12 +161,13 @@ export default function GamesLikeWordle() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href={APP_STORE_URL}
-                className="relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold tracking-widest bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Download className="w-5 h-5 mr-2" />
-                Download Defrag - Daily Puzzles
-                <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-current opacity-50" />
-                <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-current opacity-50" />
+                <MatrixButton variant="primary" size="lg" className="inline-flex items-center gap-3">
+                  <Download className="w-5 h-5" />
+                  Download Defrag - Daily Puzzles
+                </MatrixButton>
               </a>
             </div>
             <p className="text-sm text-gray-500 mt-4">
@@ -473,12 +475,13 @@ export default function GamesLikeWordle() {
             <div className="flex flex-col items-center gap-4 mb-8">
               <a 
                 href={APP_STORE_URL}
-                className="relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold tracking-widest bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Download className="w-5 h-5 mr-2" />
-                Download Defrag Free
-                <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-current opacity-50" />
-                <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-current opacity-50" />
+                <MatrixButton variant="primary" size="lg" className="inline-flex items-center gap-3">
+                  <Download className="w-5 h-5" />
+                  Download Defrag Free
+                </MatrixButton>
               </a>
               <p className="text-sm text-gray-400">Available now on iPhone & iPad • Free to play • Android coming soon</p>
             </div>

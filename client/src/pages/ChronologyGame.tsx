@@ -190,13 +190,14 @@ export default function ChronologyGame() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href={APP_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => trackAppStoreClick('hero')}
-                className="relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold tracking-widest bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden"
               >
-                <Download className="w-5 h-5 mr-2" />
-                Download on App Store
-                <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-current opacity-50" />
-                <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-current opacity-50" />
+                <MatrixButton variant="primary" size="lg" className="inline-flex items-center gap-3">
+                  <Download className="w-5 h-5" />
+                  Download on App Store
+                </MatrixButton>
               </a>
             </div>
             <p className="text-sm text-gray-500 mt-4">
@@ -318,13 +319,14 @@ export default function ChronologyGame() {
             <div className="text-center">
               <a 
                 href={APP_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => trackAppStoreClick('mid-page')}
-                className="relative inline-flex items-center justify-center px-8 py-3 font-bold tracking-widest bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden"
               >
-                <Download className="w-4 h-4 mr-2" />
-                Download Defrag Free
-                <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-current opacity-50" />
-                <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-current opacity-50" />
+                <MatrixButton variant="primary" size="md" className="inline-flex items-center gap-2">
+                  <Download className="w-4 h-4" />
+                  Download Defrag Free
+                </MatrixButton>
               </a>
             </div>
           </motion.div>
@@ -393,13 +395,14 @@ export default function ChronologyGame() {
             <div className="text-center">
               <a 
                 href={APP_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => trackAppStoreClick('mid-page')}
-                className="relative inline-flex items-center justify-center px-8 py-3 font-bold tracking-widest bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden mb-4"
               >
-                <Download className="w-4 h-4 mr-2" />
-                Download Free on App Store
-                <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-current opacity-50" />
-                <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-current opacity-50" />
+                <MatrixButton variant="primary" size="md" className="inline-flex items-center gap-2 mb-4">
+                  <Download className="w-4 h-4" />
+                  Download Free on App Store
+                </MatrixButton>
               </a>
               <p className="text-gray-400 text-sm">New puzzle daily at midnight • iOS (iPhone & iPad)</p>
             </div>
@@ -515,13 +518,14 @@ export default function ChronologyGame() {
             <div className="flex flex-col items-center gap-4">
               <a 
                 href={APP_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => trackAppStoreClick('footer')}
-                className="relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold tracking-widest bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden"
               >
-                <Download className="w-5 h-5 mr-2" />
-                Download Free on App Store
-                <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-current opacity-50" />
-                <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-current opacity-50" />
+                <MatrixButton variant="primary" size="lg" className="inline-flex items-center gap-3">
+                  <Download className="w-5 h-5" />
+                  Download Free on App Store
+                </MatrixButton>
               </a>
               <p className="text-sm text-gray-400">Available now on iPhone & iPad • Android coming soon</p>
             </div>

@@ -1,5 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
+import { MatrixButton } from "@/components/MatrixButton";
 import { motion } from "framer-motion";
 import { RelatedPages } from "@/components/RelatedPages";
 import { Brain, Download, Trophy, Clock } from "lucide-react";
@@ -54,12 +55,13 @@ export default function HistoryTriviaGame() {
 
             <a 
               href={APP_STORE_URL}
-              className="relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Download className="w-5 h-5 mr-2" />
-              Download Free on iOS
-              <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-current opacity-50" />
-              <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-current opacity-50" />
+              <MatrixButton variant="primary" size="lg" className="inline-flex items-center gap-3">
+                <Download className="w-5 h-5" />
+                Download Free on iOS
+              </MatrixButton>
             </a>
           </motion.div>
         </div>
