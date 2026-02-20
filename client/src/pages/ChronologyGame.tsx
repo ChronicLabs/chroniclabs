@@ -189,13 +189,15 @@ export default function ChronologyGame() {
 
             {/* Primary CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <MatrixButton 
+              <a 
                 href={APP_STORE_URL}
-                className="text-lg px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
+                className="relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold tracking-widest bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden"
               >
-                <Download className="w-5 h-5 mr-2 inline" />
+                <Download className="w-5 h-5 mr-2" />
                 Download on App Store
-              </MatrixButton>
+                <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-current opacity-50" />
+                <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-current opacity-50" />
+              </a>
             </div>
             <p className="text-sm text-gray-500 mt-4">
               Free to play • iOS (iPhone & iPad) • Android coming soon
@@ -314,10 +316,15 @@ export default function ChronologyGame() {
             </div>
 
             <div className="text-center">
-              <MatrixButton href={APP_STORE_URL} className="bg-blue-600 hover:bg-blue-700">
-                <Download className="w-4 h-4 mr-2 inline" />
+              <a 
+                href={APP_STORE_URL}
+                className="relative inline-flex items-center justify-center px-8 py-3 font-bold tracking-widest bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden"
+              >
+                <Download className="w-4 h-4 mr-2" />
                 Download Defrag Free
-              </MatrixButton>
+                <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-current opacity-50" />
+                <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-current opacity-50" />
+              </a>
             </div>
           </motion.div>
         </div>
@@ -383,13 +390,15 @@ export default function ChronologyGame() {
 
             {/* CTA */}
             <div className="text-center">
-              <MatrixButton 
+              <a 
                 href={APP_STORE_URL}
-                className="bg-blue-600 hover:bg-blue-700 mb-4"
+                className="relative inline-flex items-center justify-center px-8 py-3 font-bold tracking-widest bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden mb-4"
               >
-                <Download className="w-4 h-4 mr-2 inline" />
+                <Download className="w-4 h-4 mr-2" />
                 Download Free on App Store
-              </MatrixButton>
+                <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-current opacity-50" />
+                <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-current opacity-50" />
+              </a>
               <p className="text-gray-400 text-sm">New puzzle daily at midnight • iOS (iPhone & iPad)</p>
             </div>
           </motion.div>
@@ -477,13 +486,15 @@ export default function ChronologyGame() {
             </p>
 
             <div className="flex flex-col items-center gap-4">
-              <MatrixButton 
+              <a 
                 href={APP_STORE_URL}
-                className="text-lg px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
+                className="relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold tracking-widest bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden"
               >
-                <Download className="w-5 h-5 mr-2 inline" />
+                <Download className="w-5 h-5 mr-2" />
                 Download Free on App Store
-              </MatrixButton>
+                <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-current opacity-50" />
+                <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-current opacity-50" />
+              </a>
               <p className="text-sm text-gray-400">Available now on iPhone & iPad • Android coming soon</p>
             </div>
           </motion.div>
