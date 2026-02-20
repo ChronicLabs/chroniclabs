@@ -1,6 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { MatrixButton } from "@/components/MatrixButton";
 import { SEO } from "@/components/SEO";
+import { RelatedPages } from "@/components/RelatedPages";
 import { motion } from "framer-motion";
 import { Calendar, Shuffle, Trophy, Brain, Zap, Download } from "lucide-react";
 import {
@@ -120,14 +121,6 @@ const chronologySchema = [
       },
     ],
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chroniclabs.co" },
-      { "@type": "ListItem", "position": 2, "name": "Chronology Game", "item": "https://chroniclabs.co/chronology-game" },
-    ],
-  },
 ];
 
 export default function ChronologyGame() {
@@ -136,6 +129,11 @@ export default function ChronologyGame() {
       <SEO 
         title="Chronology Game: Play Daily Timeline Puzzles Like Wordle"
         description="A chronology game challenges you to arrange historical items in timeline order. Play Defrag's free daily chronology puzzles on iOS, Android, and Web."
+        canonical="https://chroniclabs.co/chronology-game"
+        breadcrumbs={[
+          { name: "Home", item: "https://chroniclabs.co/" },
+          { name: "Chronology Game" }
+        ]}
         schema={chronologySchema}
       />
 
@@ -192,7 +190,7 @@ export default function ChronologyGame() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href={APP_STORE_URL}
-                onClick={() => trackAppStoreClick({ source_page: '/chronology-game', cta_location: 'hero', cta_text: 'Download on App Store' })}
+                onClick={() => trackAppStoreClick('hero')}
                 className="relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold tracking-widest bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden"
               >
                 <Download className="w-5 h-5 mr-2" />
@@ -320,7 +318,7 @@ export default function ChronologyGame() {
             <div className="text-center">
               <a 
                 href={APP_STORE_URL}
-                onClick={() => trackAppStoreClick({ source_page: '/chronology-game', cta_location: 'mid-page', cta_text: 'Download Defrag Free' })}
+                onClick={() => trackAppStoreClick('mid-page')}
                 className="relative inline-flex items-center justify-center px-8 py-3 font-bold tracking-widest bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden"
               >
                 <Download className="w-4 h-4 mr-2" />
@@ -395,7 +393,7 @@ export default function ChronologyGame() {
             <div className="text-center">
               <a 
                 href={APP_STORE_URL}
-                onClick={() => trackAppStoreClick({ source_page: '/chronology-game', cta_location: 'mid-page', cta_text: 'Download Free on App Store' })}
+                onClick={() => trackAppStoreClick('mid-page')}
                 className="relative inline-flex items-center justify-center px-8 py-3 font-bold tracking-widest bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden mb-4"
               >
                 <Download className="w-4 h-4 mr-2" />
@@ -408,6 +406,31 @@ export default function ChronologyGame() {
           </motion.div>
         </div>
       </section>
+
+      {/* Related Pages */}
+      <RelatedPages
+        title="Explore More Puzzle Games"
+        pages={[
+          {
+            title: "Timeline Game",
+            description: "Learn how timeline sorting games work and where to play them",
+            href: "/timeline-game",
+            icon: "📅"
+          },
+          {
+            title: "Games Like Wordle",
+            description: "Discover daily puzzle games similar to Wordle's format",
+            href: "/games-like-wordle",
+            icon: "🎮"
+          },
+          {
+            title: "History Trivia Game",
+            description: "Compare trivia games to timeline puzzles",
+            href: "/history-trivia-game",
+            icon: "🎓"
+          },
+        ]}
+      />
 
       {/* FAQ Section */}
       <section className="py-20 bg-gray-900/30">
@@ -492,7 +515,7 @@ export default function ChronologyGame() {
             <div className="flex flex-col items-center gap-4">
               <a 
                 href={APP_STORE_URL}
-                onClick={() => trackAppStoreClick({ source_page: '/chronology-game', cta_location: 'footer', cta_text: 'Download Free on App Store' })}
+                onClick={() => trackAppStoreClick('footer')}
                 className="relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold tracking-widest bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden"
               >
                 <Download className="w-5 h-5 mr-2" />

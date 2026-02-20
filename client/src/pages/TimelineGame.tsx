@@ -1,6 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
+import { RelatedPages } from "@/components/RelatedPages";
 import { Calendar, Clock, Brain, Download, Zap, Trophy } from "lucide-react";
 import {
   Accordion,
@@ -87,14 +88,6 @@ const timelineGameSchema = [
     ],
     "downloadUrl": APP_STORE_URL,
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chroniclabs.co" },
-      { "@type": "ListItem", "position": 2, "name": "Timeline Game", "item": "https://chroniclabs.co/timeline-game" },
-    ],
-  },
 ];
 
 export default function TimelineGame() {
@@ -103,6 +96,11 @@ export default function TimelineGame() {
       <SEO 
         title="Timeline Game: Arrange Historical Events in Chronological Order"
         description="Play timeline games daily. Arrange 16 historical items chronologically—tech, movies, events. Free on iOS. Test your timeline knowledge with Defrag."
+        canonical="https://chroniclabs.co/timeline-game"
+        breadcrumbs={[
+          { name: "Home", item: "https://chroniclabs.co/" },
+          { name: "Timeline Game" }
+        ]}
         schema={timelineGameSchema}
       />
 

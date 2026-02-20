@@ -53,14 +53,6 @@ const gradeSchema = [
       "acceptedAnswer": { "@type": "Answer", "text": faq.a },
     })),
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chroniclabs.co" },
-      { "@type": "ListItem", "position": 2, "name": "Grade", "item": "https://chroniclabs.co/grade" },
-    ],
-  },
 ];
 
 function FAQItem({ q, a }: { q: string; a: string }) {
@@ -98,7 +90,11 @@ export default function Grade() {
         title="Grade — AI Sports Card Grader Chrome Extension"
         description="Instantly grade sports cards with AI. Upload a photo and get a PSA-aligned grade in seconds. Free Chrome extension by Chronic Labs."
         canonical="https://chroniclabs.co/grade"
-        schema={gradeSchema}
+        breadcrumbs={[
+    { name: "Home", item: "https://chroniclabs.co/" },
+    { name: "Grade" }
+  ]}
+  schema={gradeSchema}
       />
 
       {/* Hero Section */}

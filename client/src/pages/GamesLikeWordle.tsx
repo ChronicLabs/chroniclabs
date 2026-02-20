@@ -1,5 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
+import { RelatedPages } from "@/components/RelatedPages";
 import { motion } from "framer-motion";
 import { Calendar, Shuffle, Trophy, Brain, Download, Zap } from "lucide-react";
 import {
@@ -87,14 +88,6 @@ const gamesLikeWordleSchema = [
     ],
     "downloadUrl": APP_STORE_URL,
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chroniclabs.co" },
-      { "@type": "ListItem", "position": 2, "name": "Games Like Wordle", "item": "https://chroniclabs.co/games-like-wordle" },
-    ],
-  },
 ];
 
 export default function GamesLikeWordle() {
@@ -103,6 +96,11 @@ export default function GamesLikeWordle() {
       <SEO 
         title="Games Like Wordle: Daily Puzzle Alternatives for Every Interest"
         description="Looking for games like Wordle? Try Defrag's daily timeline puzzles, Connections, Quordle, and more. Same addictive daily format, different challenges."
+        canonical="https://chroniclabs.co/games-like-wordle"
+        breadcrumbs={[
+          { name: "Home", item: "https://chroniclabs.co/" },
+          { name: "Games Like Wordle" }
+        ]}
         schema={gamesLikeWordleSchema}
       />
 
@@ -396,6 +394,31 @@ export default function GamesLikeWordle() {
           </motion.div>
         </div>
       </section>
+
+      {/* Related Pages */}
+      <RelatedPages
+        title="More Daily Puzzle Games"
+        pages={[
+          {
+            title: "Chronology Game",
+            description: "Daily timeline sorting puzzles",
+            href: "/chronology-game",
+            icon: "⏰"
+          },
+          {
+            title: "Timeline Game",
+            description: "Arrange events in chronological order",
+            href: "/timeline-game",
+            icon: "📅"
+          },
+          {
+            title: "Defrag",
+            description: "Free daily chronology game for iOS",
+            href: "/defrag",
+            icon: "📱"
+          },
+        ]}
+      />
 
       {/* FAQ Section */}
       <section className="py-20 bg-gray-900/30">

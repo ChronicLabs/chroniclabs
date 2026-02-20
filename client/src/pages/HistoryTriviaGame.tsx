@@ -1,6 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
+import { RelatedPages } from "@/components/RelatedPages";
 import { Brain, Download, Trophy, Clock } from "lucide-react";
 
 const APP_STORE_URL = "https://apps.apple.com/us/app/defrag-daily-chronology-game/id6758625499";
@@ -15,14 +16,6 @@ const historyTriviaSchema = [
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
     "description": "Daily history timeline game with trivia elements",
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chroniclabs.co" },
-      { "@type": "ListItem", "position": 2, "name": "History Trivia Game", "item": "https://chroniclabs.co/history-trivia-game" },
-    ],
-  },
 ];
 
 export default function HistoryTriviaGame() {
@@ -31,6 +24,11 @@ export default function HistoryTriviaGame() {
       <SEO 
         title="History Trivia Game: Daily Timeline Puzzles & Historical Knowledge"
         description="Test your history knowledge with daily trivia timeline games. Arrange historical events, tech, and culture chronologically. Free on iOS."
+        canonical="https://chroniclabs.co/history-trivia-game"
+        breadcrumbs={[
+          { name: "Home", item: "https://chroniclabs.co/" },
+          { name: "History Trivia Game" }
+        ]}
         schema={historyTriviaSchema}
       />
 

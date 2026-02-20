@@ -1,6 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { MatrixButton } from "@/components/MatrixButton";
 import { GridAnimation } from "@/components/GridAnimation";
+import { RelatedPages } from "@/components/RelatedPages";
 import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Archive, Zap, Shield, Clock, Star, Trophy } from "lucide-react";
@@ -76,14 +77,6 @@ const defragSchema = [
   },
   {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chroniclabs.co" },
-      { "@type": "ListItem", "position": 2, "name": "Defrag", "item": "https://chroniclabs.co/defrag" },
-    ],
-  },
-  {
-    "@context": "https://schema.org",
     "@type": "HowTo",
     "name": "How to Play Defrag",
     "description": "Defrag is a daily chronological sorting puzzle. Sort 16 historical events into the correct order in as few moves as possible.",
@@ -152,7 +145,11 @@ export default function Defrag() {
         title="Defrag: Daily Timeline Puzzle Game — Free iOS App"
         description="Sort 16 historical events in chronological order. New puzzle every day. 3 difficulty modes, global leaderboard, streak tracking. Free on iPhone & iPad."
         canonical="https://chroniclabs.co/defrag"
-        schema={defragSchema}
+        breadcrumbs={[
+    { name: "Home", item: "https://chroniclabs.co/" },
+    { name: "Defrag" }
+  ]}
+  schema={defragSchema}
       />
 
       {/* ── HERO ──────────────────────────────────────────────── */}
