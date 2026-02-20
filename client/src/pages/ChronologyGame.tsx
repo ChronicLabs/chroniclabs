@@ -139,7 +139,7 @@ export default function ChronologyGame() {
 
       {/* Hero Section */}
       <section className="min-h-[70vh] flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black opacity-90" />
+        <div className="absolute inset-0 bg-black opacity-90" />
         
         <div className="container mx-auto px-4 py-20 relative z-10">
           <motion.div
@@ -208,7 +208,7 @@ export default function ChronologyGame() {
       </section>
 
       {/* How to Play Section */}
-      <section className="py-20 bg-gray-900/30">
+      <section className="py-20 bg-gray-900/30 border-t border-[#003B00]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -334,7 +334,7 @@ export default function ChronologyGame() {
       </section>
 
       {/* What Makes Defrag Unique */}
-      <section className="py-20 bg-gray-900/50">
+      <section className="py-20 bg-gray-900/20 border-t border-[#003B00]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -436,7 +436,7 @@ export default function ChronologyGame() {
       />
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-900/30">
+      <section className="py-20 bg-gray-900/30 border-t border-[#003B00]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
