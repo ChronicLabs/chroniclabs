@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Defrag from "@/pages/Defrag";
+import ChronologyGame from "@/pages/ChronologyGame";
 import Grade from "@/pages/Grade";
 import GradePrivacy from "@/pages/GradePrivacy";
 import Privacy from "@/pages/Privacy";
@@ -17,6 +18,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/defrag" component={Defrag} />
+      <Route path="/chronology-game" component={ChronologyGame} />
       <Route path="/grade" component={Grade} />
       <Route path="/grade/privacy" component={GradePrivacy} />
       <Route path="/privacy" component={Privacy} />
