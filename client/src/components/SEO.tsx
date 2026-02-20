@@ -1,11 +1,17 @@
 import { Helmet } from "react-helmet-async";
 
+interface BreadcrumbItem {
+  name: string;
+  item?: string;
+}
+
 interface SEOProps {
   title: string;
   description: string;
   canonical: string;
   ogImage?: string;
   schema?: object[];
+  breadcrumbs?: BreadcrumbItem[];
 }
 
 export function SEO({
@@ -14,7 +20,25 @@ export function SEO({
   canonical,
   ogImage = "https://chroniclabs.co/og-image.png",
   schema = [],
+  breadcrumbs,
 }: SEOProps) {
+  // Generate breadcrumb schema if breadcrumbs are provided
+  const breadcrumbSchema = breadcrumbs
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": breadcrumbs.map((crumb, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": crumb.name,
+          ...(crumb.item && { "item": crumb.item }),
+        })),
+      }
+    : null;
+
+  // Combine custom schema with breadcrumb schema
+  const allSchema = breadcrumbSchema ? [...schema, breadcrumbSchema] : schema;
+
   return (
     <Helmet>
       <title>{title}</title>
@@ -36,7 +60,7 @@ export function SEO({
       <meta name="twitter:image" content={ogImage} />
 
       {/* JSON-LD Schema */}
-      {schema.map((s, i) => (
+      {allSchema.map((s, i) => (
         <script key={i} type="application/ld+json">
           {JSON.stringify(s)}
         </script>

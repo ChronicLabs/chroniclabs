@@ -16,8 +16,24 @@ declare global {
 
 /**
  * Track App Store download button clicks
+ * @param location - Where on the page the CTA was clicked (hero, mid-page, footer, inline)
  */
-export function trackAppStoreClick(params: {
+export function trackAppStoreClick(location: string = 'unknown') {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', 'download_click', {
+      cta_location: location,
+      source_page: window.location.pathname,
+      platform: 'ios',
+      event_category: 'conversion',
+      event_label: 'app_store_download',
+    });
+  }
+}
+
+/**
+ * Track App Store download clicks (legacy signature for backward compatibility)
+ */
+export function trackAppStoreClickLegacy(params: {
   source_page: string;
   cta_location: 'hero' | 'mid-page' | 'footer' | 'inline';
   cta_text?: string;
