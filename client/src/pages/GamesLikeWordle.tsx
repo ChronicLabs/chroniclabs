@@ -165,7 +165,7 @@ export default function GamesLikeWordle() {
                 className="relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold tracking-widest bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden"
               >
                 <Download className="w-5 h-5 mr-2" />
-                Try Defrag - Timeline Wordle
+                Download Defrag - Daily Puzzles
                 <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-current opacity-50" />
                 <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-current opacity-50" />
               </a>
@@ -335,7 +335,7 @@ export default function GamesLikeWordle() {
                 className="relative inline-flex items-center justify-center px-8 py-3 font-bold tracking-widest bg-green-600 hover:bg-green-700 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden"
               >
                 <Download className="w-4 h-4 mr-2" />
-                Try Defrag - Timeline Puzzles
+                Download Defrag Free
                 <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-current opacity-50" />
                 <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-current opacity-50" />
               </a>
