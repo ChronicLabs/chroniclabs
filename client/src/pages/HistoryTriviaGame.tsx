@@ -3,6 +3,7 @@ import { SEO } from "@/components/SEO";
 import { MatrixButton } from "@/components/MatrixButton";
 import { motion } from "framer-motion";
 import { RelatedPages } from "@/components/RelatedPages";
+import { CTASection } from "@/components/CTASection";
 import { Brain, Download, Trophy, Clock } from "lucide-react";
 
 const APP_STORE_URL = "https://apps.apple.com/us/app/defrag-daily-chronology-game/id6758625499";
@@ -90,6 +91,13 @@ export default function HistoryTriviaGame() {
             icon: "🎮"
           },
         ]}
+      />
+
+      {/* Final CTA */}
+      <CTASection 
+        title="Ready for Daily History Challenges?"
+        subtitle="Download Defrag free on iOS — test your timeline knowledge every day"
+        location="footer"
       />
     </Layout>
   );

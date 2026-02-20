@@ -3,6 +3,7 @@ import { SEO } from "@/components/SEO";
 import { MatrixButton } from "@/components/MatrixButton";
 import { motion } from "framer-motion";
 import { RelatedPages } from "@/components/RelatedPages";
+import { CTASection } from "@/components/CTASection";
 import { Calendar, Clock, Brain, Download, Zap, Trophy } from "lucide-react";
 import {
   Accordion,
@@ -389,6 +390,13 @@ export default function TimelineGame() {
             icon: "🎓"
           },
         ]}
+      />
+
+      {/* Final CTA */}
+      <CTASection 
+        title="Ready to Test Your Timeline Knowledge?"
+        subtitle="Download Defrag free on iOS — new timeline puzzle every day"
+        location="footer"
       />
     </Layout>
   );

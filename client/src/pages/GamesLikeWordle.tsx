@@ -2,6 +2,7 @@ import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
 import { RelatedPages } from "@/components/RelatedPages";
 import { MatrixButton } from "@/components/MatrixButton";
+import { CTASection } from "@/components/CTASection";
 import { motion } from "framer-motion";
 import { Calendar, Shuffle, Trophy, Brain, Download, Zap } from "lucide-react";
 import {
