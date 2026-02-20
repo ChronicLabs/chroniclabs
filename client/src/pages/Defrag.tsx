@@ -545,6 +545,31 @@ export default function Defrag() {
         </div>
       </section>
 
+      {/* Related Pages */}
+      <RelatedPages
+        title="Learn More About Daily Puzzles"
+        pages={[
+          {
+            title: "Chronology Game",
+            description: "What chronology puzzles are and how to play",
+            href: "/chronology-game",
+            icon: "⏰"
+          },
+          {
+            title: "Games Like Wordle",
+            description: "Other daily puzzle games to try",
+            href: "/games-like-wordle",
+            icon: "🎮"
+          },
+          {
+            title: "Timeline Game",
+            description: "How timeline sorting games work",
+            href: "/timeline-game",
+            icon: "📅"
+          },
+        ]}
+      />
+
       {/* ── CTA ────────────────────────────────────────────────── */}
       <section className="py-24 relative overflow-hidden border-t border-[#003B00]">
         <div className="absolute inset-0 bg-[#00FF41]/5 transform skew-y-3 z-0" />

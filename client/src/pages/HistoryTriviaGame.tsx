@@ -64,6 +64,31 @@ export default function HistoryTriviaGame() {
           </motion.div>
         </div>
       </section>
+
+      {/* Related Pages */}
+      <RelatedPages
+        title="More Timeline & Puzzle Games"
+        pages={[
+          {
+            title: "Chronology Game",
+            description: "What chronology puzzles are and how to play",
+            href: "/chronology-game",
+            icon: "⏰"
+          },
+          {
+            title: "Timeline Game",
+            description: "Arrange historical events in order",
+            href: "/timeline-game",
+            icon: "📅"
+          },
+          {
+            title: "Games Like Wordle",
+            description: "Other daily puzzle games to try",
+            href: "/games-like-wordle",
+            icon: "🎮"
+          },
+        ]}
+      />
     </Layout>
   );
 }
