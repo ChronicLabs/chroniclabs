@@ -9,6 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { trackAppStoreClick } from "@/lib/analytics";
 
 const APP_STORE_URL = "https://apps.apple.com/us/app/defrag-daily-chronology-game/id6758625499";
 const GOOGLE_PLAY_URL = "#"; // Update when Android is live
@@ -191,6 +192,7 @@ export default function ChronologyGame() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href={APP_STORE_URL}
+                onClick={() => trackAppStoreClick({ source_page: '/chronology-game', cta_location: 'hero', cta_text: 'Download on App Store' })}
                 className="relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold tracking-widest bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden"
               >
                 <Download className="w-5 h-5 mr-2" />
@@ -318,6 +320,7 @@ export default function ChronologyGame() {
             <div className="text-center">
               <a 
                 href={APP_STORE_URL}
+                onClick={() => trackAppStoreClick({ source_page: '/chronology-game', cta_location: 'mid-page', cta_text: 'Download Defrag Free' })}
                 className="relative inline-flex items-center justify-center px-8 py-3 font-bold tracking-widest bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden"
               >
                 <Download className="w-4 h-4 mr-2" />
@@ -392,6 +395,7 @@ export default function ChronologyGame() {
             <div className="text-center">
               <a 
                 href={APP_STORE_URL}
+                onClick={() => trackAppStoreClick({ source_page: '/chronology-game', cta_location: 'mid-page', cta_text: 'Download Free on App Store' })}
                 className="relative inline-flex items-center justify-center px-8 py-3 font-bold tracking-widest bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden mb-4"
               >
                 <Download className="w-4 h-4 mr-2" />
@@ -488,6 +492,7 @@ export default function ChronologyGame() {
             <div className="flex flex-col items-center gap-4">
               <a 
                 href={APP_STORE_URL}
+                onClick={() => trackAppStoreClick({ source_page: '/chronology-game', cta_location: 'footer', cta_text: 'Download Free on App Store' })}
                 className="relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold tracking-widest bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 overflow-hidden"
               >
                 <Download className="w-5 h-5 mr-2" />
