@@ -10,7 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const APP_STORE_URL = "https://apps.apple.com/us/app/defrag-daily-timeline-puzzle/id6758625499";
+const APP_STORE_URL = "https://apps.apple.com/us/app/defrag-daily-chronology-game/id6758625499";
 const GOOGLE_PLAY_URL = "#"; // Update when Android is live
 const WEB_PLAY_URL = "/defrag";
 
