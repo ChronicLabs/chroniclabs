@@ -3,6 +3,10 @@
   <url><loc>https://chroniclabs.co/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://chroniclabs.co/defrag</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://chroniclabs.co/grade</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chroniclabs.co/chronology-game</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chroniclabs.co/games-like-wordle</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chroniclabs.co/timeline-game</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chroniclabs.co/history-trivia-game</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://chroniclabs.co/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://chroniclabs.co/support</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://chroniclabs.co/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
