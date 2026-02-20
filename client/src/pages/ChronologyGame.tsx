@@ -188,27 +188,17 @@ export default function ChronologyGame() {
             </div>
 
             {/* Primary CTA */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a 
-                href={APP_STORE_URL}
-                className="inline-block hover:opacity-90 transition-opacity"
-              >
-                <img 
-                  src="/app-store-badge.svg" 
-                  alt="Download Defrag on the App Store"
-                  className="h-14"
-                />
-              </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <MatrixButton 
-                href={WEB_PLAY_URL}
-                variant="secondary"
-                className="text-lg px-8 py-4"
+                href={APP_STORE_URL}
+                className="text-lg px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
               >
-                Play on Web →
+                <Download className="w-5 h-5 mr-2 inline" />
+                Download on App Store
               </MatrixButton>
             </div>
             <p className="text-sm text-gray-500 mt-4">
-              Android coming soon • Free to play
+              Free to play • iOS (iPhone & iPad) • Android coming soon
             </p>
           </motion.div>
         </div>
@@ -324,22 +314,10 @@ export default function ChronologyGame() {
             </div>
 
             <div className="text-center">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a 
-                  href={APP_STORE_URL}
-                  className="inline-block hover:opacity-90 transition-opacity"
-                >
-                  <img 
-                    src="/app-store-badge.svg" 
-                    alt="Download Defrag on the App Store"
-                    className="h-12"
-                  />
-                </a>
-                <span className="text-gray-600">or</span>
-                <MatrixButton href={WEB_PLAY_URL} variant="secondary">
-                  Try on Web →
-                </MatrixButton>
-              </div>
+              <MatrixButton href={APP_STORE_URL} className="bg-blue-600 hover:bg-blue-700">
+                <Download className="w-4 h-4 mr-2 inline" />
+                Download Defrag Free
+              </MatrixButton>
             </div>
           </motion.div>
         </div>
@@ -405,17 +383,14 @@ export default function ChronologyGame() {
 
             {/* CTA */}
             <div className="text-center">
-              <a 
+              <MatrixButton 
                 href={APP_STORE_URL}
-                className="inline-block hover:opacity-90 transition-opacity mb-4"
+                className="bg-blue-600 hover:bg-blue-700 mb-4"
               >
-                <img 
-                  src="/app-store-badge.svg" 
-                  alt="Download Defrag on the App Store"
-                  className="h-14 mx-auto"
-                />
-              </a>
-              <p className="text-gray-400 text-sm">Free to play • New puzzle daily at midnight</p>
+                <Download className="w-4 h-4 mr-2 inline" />
+                Download Free on App Store
+              </MatrixButton>
+              <p className="text-gray-400 text-sm">New puzzle daily at midnight • iOS (iPhone & iPad)</p>
             </div>
           </motion.div>
         </div>
@@ -501,27 +476,15 @@ export default function ChronologyGame() {
               No commitment needed—play today, skip tomorrow, come back next week. The puzzle resets daily whether you play or not.
             </p>
 
-            <div className="flex flex-col items-center gap-6">
-              <a 
+            <div className="flex flex-col items-center gap-4">
+              <MatrixButton 
                 href={APP_STORE_URL}
-                className="inline-block hover:opacity-90 transition-opacity"
+                className="text-lg px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
               >
-                <img 
-                  src="/app-store-badge.svg" 
-                  alt="Download Defrag on the App Store"
-                  className="h-16"
-                />
-              </a>
-              
-              <div className="flex items-center gap-4">
-                <div className="h-px w-12 bg-gray-700"></div>
-                <span className="text-gray-500 text-sm">or</span>
-                <div className="h-px w-12 bg-gray-700"></div>
-              </div>
-              
-              <MatrixButton href={WEB_PLAY_URL} variant="secondary" className="text-lg px-8 py-4">
-                Play on Web (No Download) →
+                <Download className="w-5 h-5 mr-2 inline" />
+                Download Free on App Store
               </MatrixButton>
+              <p className="text-sm text-gray-400">Available now on iPhone & iPad • Android coming soon</p>
             </div>
           </motion.div>
         </div>
