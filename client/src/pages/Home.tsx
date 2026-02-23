@@ -2,7 +2,7 @@ import { Layout } from "@/components/Layout";
 import { MatrixButton } from "@/components/MatrixButton";
 import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
-import { ArrowRight, Gamepad2, ScanLine, Store } from "lucide-react";
+import { ArrowRight, Gamepad2, CalendarDays, ScanLine, Store } from "lucide-react";
 import { Link } from "wouter";
 
 const homeSchema = [
@@ -28,8 +28,9 @@ const homeSchema = [
     "name": "Chronic Labs Projects",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Defrag", "url": "https://chroniclabs.co/defrag" },
-      { "@type": "ListItem", "position": 2, "name": "Grade", "url": "https://chroniclabs.co/grade" },
-      { "@type": "ListItem", "position": 3, "name": "Chronic Sports Cards", "url": "https://chronicsportscards.com" },
+      { "@type": "ListItem", "position": 2, "name": "Brief", "url": "https://chroniclabs.co/brief" },
+      { "@type": "ListItem", "position": 3, "name": "Grade", "url": "https://chroniclabs.co/grade" },
+      { "@type": "ListItem", "position": 4, "name": "Chronic Sports Cards", "url": "https://chronicsportscards.com" },
     ],
   },
 ];
@@ -74,7 +75,7 @@ export default function Home() {
             <p className="text-[#00FF41]/60">Apps and experiences from the lab</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
             {/* Defrag Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -115,12 +116,56 @@ export default function Home() {
               </Link>
             </motion.div>
 
-            {/* Grade Card */}
+            {/* Brief Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <Link href="/brief">
+                <div className="matrix-card group hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 bg-[#003B00]/20 rounded border border-[#003B00] group-hover:border-[#00FF41] group-hover:shadow-[0_0_10px_rgba(0,255,65,0.3)] transition-all">
+                      <CalendarDays className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-[#00FF41] transition-colors">BRIEF</h3>
+                      <span className="text-xs text-[#003B00]">DAILY_PLANNER</span>
+                    </div>
+                  </div>
+
+                  {/* Task list visual */}
+                  <div className="border border-[#003B00] w-full aspect-square mb-4 flex flex-col items-start justify-center gap-3 p-4 bg-black group-hover:border-[#00FF41] transition-colors">
+                    {[
+                      { width: "w-full", opacity: "opacity-80" },
+                      { width: "w-3/4", opacity: "opacity-50" },
+                      { width: "w-1/2", opacity: "opacity-30" },
+                    ].map((row, i) => (
+                      <div key={i} className="flex items-center gap-3 w-full">
+                        <div className={`w-3 h-3 rounded-full border border-[#00FF41] flex-shrink-0 ${row.opacity}`} />
+                        <div className={`h-2 rounded-full bg-[#00FF41] ${row.width} ${row.opacity}`} />
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className="text-[#00FF41]/60 text-sm mb-4">
+                    The day starts here. Task lists, carry-forward, and calendar time blocking.
+                  </p>
+
+                  <div className="flex items-center text-[#00FF41] text-sm group-hover:text-white transition-colors">
+                    VIEW_PROJECT <ArrowRight className="ml-2 w-4 h-4" />
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Grade Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <Link href="/grade">
                 <div className="matrix-card group hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full">
@@ -161,7 +206,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             >
               <a href="https://chronicsportscards.com" target="_blank" rel="noopener noreferrer">
                 <div className="matrix-card group hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full">

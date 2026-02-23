@@ -11,6 +11,8 @@ import ChronologyGame from "@/pages/ChronologyGame";
 import GamesLikeWordle from "@/pages/GamesLikeWordle";
 import TimelineGame from "@/pages/TimelineGame";
 import HistoryTriviaGame from "@/pages/HistoryTriviaGame";
+import Brief from "@/pages/Brief";
+import BriefPrivacy from "@/pages/BriefPrivacy";
 import Grade from "@/pages/Grade";
 import GradePrivacy from "@/pages/GradePrivacy";
 import Privacy from "@/pages/Privacy";
@@ -28,6 +30,8 @@ function Router() {
         <Route path="/games-like-wordle" component={GamesLikeWordle} />
         <Route path="/timeline-game" component={TimelineGame} />
         <Route path="/history-trivia-game" component={HistoryTriviaGame} />
+        <Route path="/brief" component={Brief} />
+        <Route path="/brief/privacy" component={BriefPrivacy} />
         <Route path="/grade" component={Grade} />
         <Route path="/grade/privacy" component={GradePrivacy} />
         <Route path="/privacy" component={Privacy} />

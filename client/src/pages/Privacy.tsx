@@ -34,7 +34,9 @@ export default function Privacy() {
             <div className="mt-6 p-4 border border-[#003B00] bg-[#003B00]/10 rounded">
               <p className="text-[#00FF41]/80 text-sm">
                 This privacy policy covers <strong className="text-white">Defrag</strong>. 
-                For the <strong className="text-white">Grade Chrome Extension</strong> privacy policy, 
+                For the <strong className="text-white">Brief</strong> daily planner app, 
+                see <Link href="/brief/privacy" className="text-[#00FF41] hover:text-white underline">Brief Privacy Policy</Link>.
+                For the <strong className="text-white">Grade Chrome Extension</strong>, 
                 see <Link href="/grade/privacy" className="text-[#00FF41] hover:text-white underline">Grade Privacy Policy</Link>.
               </p>
             </div>
